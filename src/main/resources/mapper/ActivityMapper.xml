@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gis.geoctap.mapper.ActivityMapper">
+
+    <delete id="deleteNormalActivity">
+        delete from normal_activity where normal_id = #{normalId} and activity_id = #{activityId}
+    </delete>
+
+    <insert id="setNormalActivity">
+        insert into normal_activity(normal_id, activity_id) values(#{normalId}, #{activityId})
+    </insert>
+
+    <select id="findPage" resultType="com.gis.geoctap.entity.Activity">
+        select activity.*, sys_user.nickname as charge  from activity
+        left join sys_user
+        on activity.charge_id = sys_user.id
+        <where>
+            <if test="name != null and name != ''">
+                and name like concat('%', #{name},'%')
+            </if>
+        </where>
+    </select>
+</mapper>
