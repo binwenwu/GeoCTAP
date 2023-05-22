@@ -5,9 +5,9 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/geoctap?serverTimezone=GMT%2b8
+    url: jdbc:mysql://125.220.153.23:31621/geoctap?serverTimezone=GMT%2b8
     username: root
-    password: 123456
+    password: VubCMiHvT1
   redis:
     host: 127.0.0.1
     port: 6379

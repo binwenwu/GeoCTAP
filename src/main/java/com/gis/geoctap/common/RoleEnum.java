@@ -1,6 +1,7 @@
 package com.gis.geoctap.common;
 
 /**
+ * 权限用户角色枚举类
  * RoleEnum
  * @author BinwenWu
  * @version $Id: RoleEnum

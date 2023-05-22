@@ -8,8 +8,8 @@
            router
   >
     <div style="height: 60px; line-height: 60px; text-align: center">
-      <img src="../assets/logo.png" alt="" style="width: 20px; position: relative; top: 5px;">
-      <b style="color: white; margin-left: 5px" v-show="logoTextShow">GeoCTAP 后台</b>
+<!--      <img src="../../public/favicon.jpg" alt="" style="width: 20px; position: relative; top: 5px;">-->
+      <b style="color: white; margin-left: 5px" v-show="logoTextShow">♥ GeoCTAP ♥</b>
     </div>
     <div v-for="item in menus" :key="item.id">
       <div v-if="item.path">

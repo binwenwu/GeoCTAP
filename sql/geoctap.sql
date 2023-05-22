@@ -11,7 +11,7 @@
  Target Server Version : 80031
  File Encoding         : 65001
 
- Date: 06/05/2023 22:19:00
+ Date: 22/05/2023 08:42:18
 */
 
 SET NAMES utf8mb4;
@@ -29,7 +29,7 @@ CREATE TABLE `activity`  (
   `state` tinyint(1) NULL DEFAULT NULL COMMENT '是否开始',
   `charge_id` int(0) NULL DEFAULT NULL COMMENT '负责人id',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 4 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 3 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of activity
@@ -174,14 +174,13 @@ CREATE TABLE `sys_file`  (
   `is_delete` tinyint(1) NULL DEFAULT 0 COMMENT '是否删除',
   `enable` tinyint(1) NULL DEFAULT 1 COMMENT '是否禁用链接',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 84 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 107 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_file
 -- ----------------------------
-INSERT INTO `sys_file` VALUES (85, 'GitBash.png', 'png', 14, 'http://localhost:9090/file/4d69f050b38b49829d26e5f060dd22ac.png', '474b45dafe51b4a890470f89f031c065', 0, 1);
-INSERT INTO `sys_file` VALUES (86, 'test.png', 'png', 30, 'http://localhost:9090/file/3f7b7d1944a447c48f42d1a67cd82269.png', '8e82e171c126ab1aa508dd43c75db94e', 0, 1);
-INSERT INTO `sys_file` VALUES (87, 'GitBash.png', 'png', 14, 'http://localhost:9090/file/4d69f050b38b49829d26e5f060dd22ac.png', '474b45dafe51b4a890470f89f031c065', 0, 1);
+INSERT INTO `sys_file` VALUES (136, '08.csv', 'csv', 2062, 'http://localhost:9090/file/53601797dad3487fa05cb0db438bc2df.csv', '585cb12164b539fc55904e482117c58b', 0, 1);
+INSERT INTO `sys_file` VALUES (137, 'GitBash.png', 'png', 14, 'http://localhost:9090/file/6837ddfacec24156ad5ade42f26f4173.png', '474b45dafe51b4a890470f89f031c065', 0, 1);
 
 -- ----------------------------
 -- Table structure for sys_menu
@@ -197,7 +196,7 @@ CREATE TABLE `sys_menu`  (
   `page_path` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '页面路径',
   `sort_num` int(0) NULL DEFAULT NULL COMMENT '排序',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 43 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 44 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_menu
@@ -285,15 +284,14 @@ CREATE TABLE `sys_user`  (
   `avatar_url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '头像',
   `role` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL DEFAULT NULL COMMENT '角色',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 32 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 34 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of sys_user
 -- ----------------------------
-INSERT INTO `sys_user` VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '贪肯奇', 'admin@qq.com', '13988997788', '广东深圳', '2023-05-06 14:57:16', 'http://localhost:9090/file/3f5ab4ac5cb4481e8bc6baacc2385313.jpeg', 'ROLE_ADMIN');
+INSERT INTO `sys_user` VALUES (1, 'admin', 'e10adc3949ba59abbe56e057f20f883e', '贪肯奇', 'admin@qq.com', '13988997788', '广东深圳', '2023-05-06 14:57:16', 'http://localhost:9090/file/6837ddfacec24156ad5ade42f26f4173.png', 'ROLE_ADMIN');
 INSERT INTO `sys_user` VALUES (2, 'user01', 'e10adc3949ba59abbe56e057f20f883e', '负责人', 'charge@qq.com', '13988997788', '湖北武汉', '2023-04-30 18:01:02', 'http://localhost:9090/file/3f5ab4ac5cb4481e8bc6baacc2385313.jpeg', 'ROLE_CHARGE');
 INSERT INTO `sys_user` VALUES (3, 'user02', 'e10adc3949ba59abbe56e057f20f883e', '普通用户', 'normal@qq.com', '13826907515', '湖北武汉', '2023-05-06 16:05:11', 'http://localhost:9090/file/3f5ab4ac5cb4481e8bc6baacc2385313.jpeg', 'ROLE_NORMAL');
-INSERT INTO `sys_user` VALUES (34, 'user03', 'e10adc3949ba59abbe56e057f20f883e', '普通用户', NULL, NULL, NULL, '2023-05-06 21:56:18', NULL, 'ROLE_NORMAL');
 
 -- ----------------------------
 -- Table structure for t_comment
@@ -308,7 +306,7 @@ CREATE TABLE `t_comment`  (
   `origin_id` int(0) NULL DEFAULT NULL COMMENT '最上级评论id',
   `article_id` int(0) NULL DEFAULT NULL COMMENT '关联文章的id',
   PRIMARY KEY (`id`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 21 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 22 CHARACTER SET = utf8mb4 COLLATE = utf8mb4_unicode_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of t_comment
