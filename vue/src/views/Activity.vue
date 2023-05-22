@@ -28,7 +28,7 @@
       <el-table-column prop="fund" label="活动经费"></el-table-column>
       <el-table-column prop="times" label="志愿时长"></el-table-column>
       <el-table-column prop="charge" label="负责人"></el-table-column>
-      <el-table-column label="启用">
+      <el-table-column label="启用" v-if="user.role === 'ROLE_ADMIN'">
         <template slot-scope="scope">
           <el-switch v-model="scope.row.state" active-color="#13ce66" inactive-color="#ccc"
                      @change="changeEnable(scope.row)"></el-switch>
@@ -36,7 +36,8 @@
       </el-table-column>
       <el-table-column label="操作" width="280" align="center">
         <template slot-scope="scope">
-          <el-button type="primary" @click="selectActivity(scope.row.id)">报名</el-button>
+          <el-button type="primary" @click="selectActivity(scope.row.id)" v-if="user.role === 'ROLE_NORMAL'">报名</el-button>
+          <el-button type="danger" @click="cancelActivity(scope.row.id)" v-if="user.role === 'ROLE_NORMAL'">取消</el-button>
           <el-button type="success" @click="handleEdit(scope.row)" v-if="user.role === 'ROLE_ADMIN'">编辑 <i class="el-icon-edit"></i></el-button>
           <el-popconfirm
               class="ml-5"
@@ -114,9 +115,18 @@ export default {
   },
   methods: {
     selectActivity(activityId) {
-      this.request.post('/activity/normalActivity/' + activityId + "/" + this.user.id).then(res => {
+      this.request.post('/activity/setNormalActivity/' + activityId + "/" + this.user.id).then(res => {
         if (res.code === '200') {
           this.$message.success("报名成功")
+        } else {
+          this.$message.success(res.msg)
+        }
+      })
+    },
+    cancelActivity(activityId) {
+      this.request.post('/activity/deleteNormalActivity/' + activityId + "/" + this.user.id).then(res => {
+        if (res.code === '200') {
+          this.$message.success("取消报名成功")
         } else {
           this.$message.success(res.msg)
         }

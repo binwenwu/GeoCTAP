@@ -36,11 +36,19 @@ public class ActivityController {
         return Result.success();
     }
 
-    @PostMapping("/normalActivity/{activityId}/{normalId}")
-    public Result normalActivity(@PathVariable Integer activityId, @PathVariable Integer normalId) {
+    @PostMapping("/setNormalActivity/{activityId}/{normalId}")
+    public Result setnormalActivity(@PathVariable Integer activityId, @PathVariable Integer normalId) {
         activityService.setNormalActivity(activityId, normalId);
         return Result.success();
     }
+
+    @PostMapping("/deleteNormalActivity/{activityId}/{normalId}")
+    public Result deletenormalActivity(@PathVariable Integer activityId, @PathVariable Integer normalId) {
+        activityService.deleteNormalActivity(activityId, normalId);
+        return Result.success();
+    }
+
+
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {

@@ -9,12 +9,21 @@ spring:
     username: root
     password: VubCMiHvT1
   redis:
-    host: 127.0.0.1
-    port: 6379
+    host: 125.220.153.23
+    port: 31352
+    password: GWCMnhHUYa
   servlet:
     multipart:
       max-file-size: 100MB
       max-request-size: 100MB
+  boot:
+    admin:
+      client:
+        url: http://localhost:8888  # SpringBoot Admin的服务端地址
+        instance:
+          prefer-ip: true # 基于IP地址xiang5服务器注册，默认域名注册
+  application:
+    name: GeoCTAP
 mybatis:
   mapper-locations: classpath:mapper/*.xml  #扫描所有mybatis的xml文件
 #  configuration:
@@ -27,3 +36,21 @@ files:
   upload:
     path: C:/Users/Jiaoshou/Desktop/GeoCTAP/files/
 #    path: /home/files/
+
+
+#开放端点用于SpringBoot Admin的监控
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+    endpoint:
+      health:
+        show-details: always
+        enabled: true
+      info:
+        enabled: false
+      metrics:
+        enabled: true
+    enabled-by-default: true  # 开启所有监控端点
+

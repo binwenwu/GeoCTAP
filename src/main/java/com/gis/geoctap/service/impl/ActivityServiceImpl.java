@@ -33,4 +33,10 @@ public class ActivityServiceImpl extends ServiceImpl<ActivityMapper, Activity> i
         activityMapper.setNormalActivity(activityId, normalId);
     }
 
+    @Transactional
+    @Override
+    public void deleteNormalActivity(Integer activityId, Integer normalId) {
+        activityMapper.deleteNormalActivity(activityId, normalId);
+    }
+
 }

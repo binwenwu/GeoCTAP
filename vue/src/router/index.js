@@ -21,6 +21,11 @@ const routes = [
     component: () => import('../views/404.vue')
   },
   {
+    path: '/largeScreen',
+    name: 'LargeScreen',
+    component: () => import('../views/front/LargeScreen.vue')
+  },
+  {
     path: '/front',
     name: 'Front',
     component: () => import('../views/front/Front'),

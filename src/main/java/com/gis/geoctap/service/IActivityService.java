@@ -16,5 +16,6 @@ public interface IActivityService extends IService<Activity> {
     Page<Activity> findPage(Page<Activity> page, String name);
 
 
+    void deleteNormalActivity(Integer activityId, Integer normalId);
     void setNormalActivity(Integer activityId, Integer normalId);
 }
