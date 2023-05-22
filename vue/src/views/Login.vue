@@ -1,10 +1,10 @@
 <template>
   <div class="wrapper">
-    <div class="loginHeader" style="font-family: '华文楷体';font-size: 35px">
+    <div class="loginHeader">
       儿童拐卖分析宣传一体化平台（GeoCTAP）
     </div>
     <!--走马图-->
-    <el-main class="loginShow">
+    <div class="loginShow">
       <template>
         <el-carousel :interval="3000" type="card" :height="bannerHeight + 'px'" indicator-position="none">
           <el-carousel-item v-for="(img,index) in imgList" :key="index">
@@ -12,18 +12,20 @@
           </el-carousel-item>
         </el-carousel>
       </template>
-    </el-main>
+    </div>
     <div class="loginBody">
-      <div style="margin: 15px 0; text-align: center; font-size: 1.5rem;"><b>登 录</b></div>
+      <div style="margin: 2vh 0; text-align: center; font-size: calc(100vw * 25 / 1920);"><b>登 录</b></div>
       <el-form :model="user" :rules="rules" ref="userForm">
         <el-form-item prop="username">
-          用户名：<el-input size="medium" prefix-icon="el-icon-user" v-model="user.username"></el-input>
+          <span class="passwordTip">账号：</span>
+          <el-input placeholder="请输入账号" size="medium" prefix-icon="el-icon-user" v-model="user.username"></el-input>
         </el-form-item>
         <el-form-item prop="password">
-          密码：<el-input size="medium" prefix-icon="el-icon-lock" show-password
-                       v-model="user.password" @keyup.native.enter="login"></el-input>
+          <span class="passwordTip">密码：</span>
+          <el-input placeholder="请输入密码" size="medium" prefix-icon="el-icon-lock" show-password
+                    v-model="user.password" @keyup.native.enter="login"></el-input>
         </el-form-item>
-        <el-form-item style="margin: 10px 0; text-align: right">
+        <el-form-item style="margin: 1vh 0; text-align: right">
           <el-button type="info" size="small" autocomplete="off" @click="$router.push('/register')">注册</el-button>
           <el-button type="primary" size="small" autocomplete="off" @click="login">登录</el-button>
         </el-form-item>
@@ -43,15 +45,15 @@ export default {
       rules: {
         username: [
           {required: true, message: '请输入用户名', trigger: 'blur'},
-          {min: 3, max: 10, message: '长度在 3 到 10 个字符', trigger: 'blur'}
+          {min: 3, max: 10, message: '长度在 3 到 5 个字符', trigger: 'blur'}
         ],
         password: [
           {required: true, message: '请输入密码', trigger: 'blur'},
           {min: 3, max: 20, message: '长度在 3 到 20 个字符', trigger: 'blur'}
         ],
       },
-      //走马灯
-      imgList:[
+      // 走马灯
+      imgList: [
         {
           url: require('../assets/picture1.png')
         },
@@ -66,9 +68,9 @@ export default {
         }
       ],
       // 图片父容器高度
-      bannerHeight :1000,
+      bannerHeight: 1000,
       // 浏览器宽度
-      screenWidth :0,
+      screenWidth: 0,
     }
   },
   methods: {
@@ -122,6 +124,7 @@ export default {
   background-size: 100% 100%;
   overflow: hidden;
 }
+
 .loginHeader {
   /*flex 布局*/
   display: flex;
@@ -130,22 +133,40 @@ export default {
   /*实现水平居中*/
   justify-content: center;
   color: white;
-  font-size: 1.75rem;
+  font-size: calc(100vw * 36 / 1920);;
   font-weight: bold;
   background: url("../assets/largeTitle.png") no-repeat;
   background-size: 100% 180%;
   height: 12%;
 }
+
 .loginShow {
-  margin-top: 1rem;
+  margin: 3vh auto;
 }
+
 .loginBody {
   color: white;
-  margin: 10px auto;
+  margin: 5vh auto;
   background: url("../assets/textBg.png") no-repeat;
-  background-size: 600px 320px;
-  width: 600px;
-  height: 320px;
-  padding: 20px 40px;
+  background-size: 50vw 40vh;
+  width: 50vw;
+  height: 40vh;
+  padding: 2vh 10vw;
+}
+
+.passwordTip {
+  font-size: calc(100vw * 16 / 1920);
+}
+
+div >>> .el-input > input {
+  height: 4vh;
+}
+
+.el-form-item {
+  height: 8vh;
+}
+
+div >>> .el-button {
+  height: 4vh;
 }
 </style>

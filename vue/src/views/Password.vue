@@ -1,5 +1,5 @@
 <template>
-  <el-card style="width: 500px;">
+  <el-card style="width: 100%;height: 100%;">
     <el-form label-width="120px" size="small" :model="form" :rules="rules" ref="pass">
 
       <el-form-item label="原密码" prop="password">
@@ -27,16 +27,16 @@ export default {
       user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {},
       rules: {
         password: [
-          { required: true, message: '请输入原密码', trigger: 'blur' },
-          { min: 3, message: '长度不少于3位', trigger: 'blur' }
+          {required: true, message: '请输入原密码', trigger: 'blur'},
+          {min: 3, message: '长度不少于3位', trigger: 'blur'}
         ],
         newPassword: [
-          { required: true, message: '请输入新密码', trigger: 'blur' },
-          { min: 3, message: '长度不少于3位', trigger: 'blur' }
+          {required: true, message: '请输入新密码', trigger: 'blur'},
+          {min: 3, message: '长度不少于3位', trigger: 'blur'}
         ],
         confirmPassword: [
-          { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 3, message: '长度不少于3位', trigger: 'blur' }
+          {required: true, message: '请输入密码', trigger: 'blur'},
+          {min: 3, message: '长度不少于3位', trigger: 'blur'}
         ],
       }
     }
@@ -72,6 +72,7 @@ export default {
   text-align: center;
   padding-bottom: 10px;
 }
+
 .avatar-uploader .el-upload {
   border: 1px dashed #d9d9d9;
   border-radius: 6px;
@@ -79,9 +80,11 @@ export default {
   position: relative;
   overflow: hidden;
 }
+
 .avatar-uploader .el-upload:hover {
   border-color: #409EFF;
 }
+
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
@@ -90,9 +93,16 @@ export default {
   line-height: 138px;
   text-align: center;
 }
+
 .avatar {
   width: 138px;
   height: 138px;
   display: block;
+}
+
+.el-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 </style>

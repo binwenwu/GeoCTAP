@@ -1,24 +1,24 @@
 <template>
-
-  <div id="app" style="padding: 0;margin: 0" >
-    <router-view/>
-  </div>
-
+    <div id="app">
+      <router-view/>
+    </div>
 </template>
 <script>
 
-import ScaleBox from "vue2-scale-box";
 import {serverIp} from "../public/config";
+import ScaleBox from 'vue2-scale-box'
 
 export default {
   name: 'App',
+  components: {
+    ScaleBox
+  },
   data() {
     return {
-      width:window.screen.width * window.devicePixelRatio,
-      height:window.screen.height * window.devicePixelRatio,
+      width: window.screen.width * window.devicePixelRatio,
+      height: window.screen.height * window.devicePixelRatio,
     }
   },
-  components: { ScaleBox },
   /*看板娘初始化
     参数说明
     model 模型的配置
@@ -46,9 +46,9 @@ export default {
         pluginModelPath: 'live2d-widget-model-haru_1/assets/', //中间这个haru_2就是你的老婆,想换个老婆,换这个就可以了
         tagMode: false,
         debug: false,
-        model: { jsonPath: '../live2dw/live2d-widget-model-haru_1/assets/haru01.model.json' },
-        display: { position: 'right', width: 150, height: 320 },  //调整老婆大小,和位置
-        mobile: { show: true },   //要不要老婆盯着你的鼠标看
+        model: {jsonPath: '../live2dw/live2d-widget-model-haru_1/assets/haru01.model.json'},
+        display: {position: 'right', width: 150, height: 320},  //调整老婆大小,和位置
+        mobile: {show: true},   //要不要老婆盯着你的鼠标看
         log: false,
       })
     }, 500)
