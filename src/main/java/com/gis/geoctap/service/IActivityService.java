@@ -13,7 +13,7 @@ import com.gis.geoctap.entity.Activity;
  */
 public interface IActivityService extends IService<Activity> {
 
-    Page<Activity> findPage(Page<Activity> page, String name);
+    Page<Activity> findPage(Page<Activity> page,String name);
 
 
     void deleteNormalActivity(Integer activityId, Integer normalId);

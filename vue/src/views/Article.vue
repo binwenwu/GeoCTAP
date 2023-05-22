@@ -116,7 +116,8 @@ export default {
       total: 0,
       dialogFormVisible: false,
       teachers: [],
-      user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {},
+      user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {
+      },
       content: '',
       viewDialogVis: false
     }
@@ -146,11 +147,14 @@ export default {
       })
     },
     load() {
+      console.log(this.user.role)
       this.request.get("/article/page", {
         params: {
           pageNum: this.pageNum,
           pageSize: this.pageSize,
-          name: this.name,
+          user: this.user.nickname,
+          role: this.user.role,
+          name: this.name
         }
       }).then(res => {
 

@@ -8,10 +8,10 @@
 import * as echarts from 'echarts'
 
 export default {
-  name: "Dashbord",
+  name: "K8s",
   data() {
     return {
-      src:'http://localhost:8888/instances/bd43e6c6b245/details'
+      src:'http://125.220.153.23:31885'
 
     }
   }

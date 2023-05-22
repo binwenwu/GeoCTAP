@@ -16,6 +16,7 @@
     "vue": "^2.6.11",
     "vue-router": "^3.2.0",
     "vue-video-player": "^5.0.2",
+    "vue2-scale-box": "^0.1.6",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

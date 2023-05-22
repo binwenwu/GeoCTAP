@@ -1,14 +1,24 @@
 <template>
-  <div id="app">
+
+  <div id="app" style="padding: 0;margin: 0" >
     <router-view/>
   </div>
+
 </template>
 <script>
 
-
+import ScaleBox from "vue2-scale-box";
+import {serverIp} from "../public/config";
 
 export default {
   name: 'App',
+  data() {
+    return {
+      width:window.screen.width * window.devicePixelRatio,
+      height:window.screen.height * window.devicePixelRatio,
+    }
+  },
+  components: { ScaleBox },
   /*看板娘初始化
     参数说明
     model 模型的配置
@@ -46,3 +56,5 @@ export default {
 }
 
 </script>
+
+

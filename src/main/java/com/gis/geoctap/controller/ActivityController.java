@@ -75,7 +75,7 @@ public class ActivityController {
     @GetMapping("/page")
     public Result findPage(@RequestParam String name,
                            @RequestParam Integer pageNum,
-                                @RequestParam Integer pageSize) {
+                           @RequestParam Integer pageSize) {
 //        QueryWrapper<Activity> queryWrapper = new QueryWrapper<>();
 //        queryWrapper.orderByDesc("id");
 //        Page<Activity> page = activityService.page(new Page<>(pageNum, pageSize), queryWrapper);
@@ -87,7 +87,8 @@ public class ActivityController {
 //            }
 //
 //        }
-        Page<Activity> page = activityService.findPage(new Page<>(pageNum, pageSize), name);
+
+        Page<Activity> page = activityService.findPage(new Page<>(pageNum, pageSize),name);
         return Result.success(page);
     }
 

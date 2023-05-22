@@ -14,7 +14,7 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface ActivityMapper extends BaseMapper<Activity> {
 
-    Page<Activity> findPage(Page<Activity> page, @Param("name") String name);
+    Page<Activity> findPage(Page<Activity> pag,@Param("name") String name);
 
     void deleteNormalActivity(@Param("activityId")Integer activityId, @Param("normalId") Integer normalId);
 

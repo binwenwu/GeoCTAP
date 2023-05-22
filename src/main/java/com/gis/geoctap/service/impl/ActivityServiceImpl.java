@@ -23,7 +23,7 @@ public class ActivityServiceImpl extends ServiceImpl<ActivityMapper, Activity> i
 
     @Override
     public Page<Activity> findPage(Page<Activity> page, String name) {
-        return activityMapper.findPage(page, name);
+        return activityMapper.findPage(page,name);
     }
 
     @Transactional

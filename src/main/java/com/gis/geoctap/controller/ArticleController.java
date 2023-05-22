@@ -77,10 +77,16 @@ public class ArticleController {
 
     @GetMapping("/page")
     public Result findPage(@RequestParam String name,
+                           @RequestParam String user,
+                           @RequestParam String role,
                            @RequestParam Integer pageNum,
                            @RequestParam Integer pageSize) {
         QueryWrapper<Article> queryWrapper = new QueryWrapper<>();
         queryWrapper.orderByDesc("id");
+        // 除管理员外，只能看到自己发布的文章
+        if (!role.equals("ROLE_ADMIN")) {
+            queryWrapper.like("user", user);
+        }
         if (StrUtil.isNotBlank(name)) {
             queryWrapper.like("name", name);
         }
