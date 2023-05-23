@@ -34,11 +34,13 @@
 <script>
 
 import axios from "axios";
+import {serverIp} from "../../../public/config";
 
 export default {
   name: "Article",
   data() {
     return {
+      serverIp: serverIp,
       form: {},
       tableData: [],
       name: '',
@@ -68,7 +70,7 @@ export default {
       const formData = new FormData();
       formData.append('file', $file);
       axios({
-        url: 'http://localhost:9090/file/upload',
+        url: 'http://${serverIp}:9090/file/upload',
         method: 'post',
         data: formData,
         headers: {'Content-Type': 'multipart/form-data'},
@@ -78,7 +80,7 @@ export default {
       })
     },
     load() {
-      this.request.get("/article/page", {
+      this.request.get("/article/page2", {
         params: {
           pageNum: this.pageNum,
           pageSize: this.pageSize,

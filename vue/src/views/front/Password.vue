@@ -1,21 +1,23 @@
 <template>
-  <el-card style="width: 500px;">
-    <el-form label-width="120px" size="small" :model="form" :rules="rules" ref="pass">
+  <div class="container">
+    <el-card style="width: 500px;">
+      <el-form label-width="120px" size="small" :model="form" :rules="rules" ref="pass">
 
-      <el-form-item label="原密码" prop="password">
-        <el-input v-model="form.password" autocomplete="off" show-password></el-input>
-      </el-form-item>
-      <el-form-item label="新密码" prop="newPassword">
-        <el-input v-model="form.newPassword" autocomplete="off" show-password></el-input>
-      </el-form-item>
-      <el-form-item label="确认新密码" prop="confirmPassword">
-        <el-input v-model="form.confirmPassword" autocomplete="off" show-password></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="save">确 定</el-button>
-      </el-form-item>
-    </el-form>
-  </el-card>
+        <el-form-item label="原密码" prop="password">
+          <el-input v-model="form.password" autocomplete="off" show-password></el-input>
+        </el-form-item>
+        <el-form-item label="新密码" prop="newPassword">
+          <el-input v-model="form.newPassword" autocomplete="off" show-password></el-input>
+        </el-form-item>
+        <el-form-item label="确认新密码" prop="confirmPassword">
+          <el-input v-model="form.confirmPassword" autocomplete="off" show-password></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="save">确 定</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
+  </div>
 </template>
 
 <script>
@@ -27,16 +29,16 @@ export default {
       user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {},
       rules: {
         password: [
-          { required: true, message: '请输入原密码', trigger: 'blur' },
-          { min: 3, message: '长度不少于3位', trigger: 'blur' }
+          {required: true, message: '请输入原密码', trigger: 'blur'},
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
         ],
         newPassword: [
-          { required: true, message: '请输入新密码', trigger: 'blur' },
-          { min: 3, message: '长度不少于3位', trigger: 'blur' }
+          {required: true, message: '请输入新密码', trigger: 'blur'},
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
         ],
         confirmPassword: [
-          { required: true, message: '请输入密码', trigger: 'blur' },
-          { min: 3, message: '长度不少于3位', trigger: 'blur' }
+          {required: true, message: '请输入密码', trigger: 'blur'},
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
         ],
       }
     }
@@ -72,6 +74,7 @@ export default {
   text-align: center;
   padding-bottom: 10px;
 }
+
 .avatar-uploader .el-upload {
   border: 1px dashed #d9d9d9;
   border-radius: 6px;
@@ -79,9 +82,11 @@ export default {
   position: relative;
   overflow: hidden;
 }
+
 .avatar-uploader .el-upload:hover {
   border-color: #409EFF;
 }
+
 .avatar-uploader-icon {
   font-size: 28px;
   color: #8c939d;
@@ -90,9 +95,19 @@ export default {
   line-height: 138px;
   text-align: center;
 }
+
 .avatar {
   width: 138px;
   height: 138px;
   display: block;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 75vh; /* 可视区域的高度 */
+}
+
+
 </style>

@@ -93,5 +93,18 @@ public class ArticleController {
         return Result.success(articleService.page(new Page<>(pageNum, pageSize), queryWrapper));
     }
 
+
+    @GetMapping("/page2")
+    public Result findPage(@RequestParam String name,
+                           @RequestParam Integer pageNum,
+                           @RequestParam Integer pageSize) {
+        QueryWrapper<Article> queryWrapper = new QueryWrapper<>();
+        queryWrapper.orderByDesc("id");
+        if (StrUtil.isNotBlank(name)) {
+            queryWrapper.like("name", name);
+        }
+        return Result.success(articleService.page(new Page<>(pageNum, pageSize), queryWrapper));
+    }
+
 }
 

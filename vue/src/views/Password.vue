@@ -1,21 +1,23 @@
 <template>
-  <el-card style="width: 100%;height: 100%;">
-    <el-form label-width="120px" size="small" :model="form" :rules="rules" ref="pass">
 
-      <el-form-item label="原密码" prop="password">
-        <el-input v-model="form.password" autocomplete="off" show-password></el-input>
-      </el-form-item>
-      <el-form-item label="新密码" prop="newPassword">
-        <el-input v-model="form.newPassword" autocomplete="off" show-password></el-input>
-      </el-form-item>
-      <el-form-item label="确认新密码" prop="confirmPassword">
-        <el-input v-model="form.confirmPassword" autocomplete="off" show-password></el-input>
-      </el-form-item>
-      <el-form-item>
-        <el-button type="primary" @click="save">确 定</el-button>
-      </el-form-item>
-    </el-form>
-  </el-card>
+    <el-card style="width: 100%;height: 100%;">
+      <el-form label-width="120px" size="small" :model="form" :rules="rules" ref="pass">
+
+        <el-form-item label="原密码" prop="password">
+          <el-input v-model="form.password" autocomplete="off" show-password></el-input>
+        </el-form-item>
+        <el-form-item label="新密码" prop="newPassword">
+          <el-input v-model="form.newPassword" autocomplete="off" show-password></el-input>
+        </el-form-item>
+        <el-form-item label="确认新密码" prop="confirmPassword">
+          <el-input v-model="form.confirmPassword" autocomplete="off" show-password></el-input>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="save">确 定</el-button>
+        </el-form-item>
+      </el-form>
+    </el-card>
+
 </template>
 
 <script>
@@ -28,15 +30,15 @@ export default {
       rules: {
         password: [
           {required: true, message: '请输入原密码', trigger: 'blur'},
-          {min: 3, message: '长度不少于3位', trigger: 'blur'}
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
         ],
         newPassword: [
           {required: true, message: '请输入新密码', trigger: 'blur'},
-          {min: 3, message: '长度不少于3位', trigger: 'blur'}
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
         ],
         confirmPassword: [
           {required: true, message: '请输入密码', trigger: 'blur'},
-          {min: 3, message: '长度不少于3位', trigger: 'blur'}
+          {min: 3, max: 15, message: '长度在 3 到 15 个字符', trigger: 'blur'}
         ],
       }
     }
@@ -105,4 +107,6 @@ export default {
   align-items: center;
   justify-content: center;
 }
+
+
 </style>

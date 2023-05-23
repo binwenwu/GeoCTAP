@@ -1,32 +1,20 @@
 <template>
   <div>
-<!--    头部-->
+    <!--    头部-->
     <div style="display: flex; height: 60px; line-height: 60px; border-bottom: 1px solid #eee">
-      <div style="width: 300px; display: flex; padding-left: 30px">
+      <div style="width: 200px; display: flex; padding-left: 30px">
         <div style="width: 60px">
-          <img src="../../assets/logo.png" alt="" style="width: 50px; position: relative; top: 5px; right: 0">
+          <img src="../../assets/favicon.jpg" alt="" style="width: 50px; position: relative; top: 5px; right: 0">
         </div>
-        <div style="flex: 1">欢迎来到GeoCTAP</div>
       </div>
       <div style="flex: 1">
         <el-menu :default-active="'1'" class="el-menu-demo" mode="horizontal" router>
-          <el-menu-item index="/front/home">首页</el-menu-item>
-          <el-menu-item index="/front/video">视频播放</el-menu-item>
-          <el-menu-item index="/front/article">文章列表</el-menu-item>
-          <el-submenu index="2">
-            <template slot="title">我的工作台</template>
-            <el-menu-item index="/front/item1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项1</el-menu-item>
-              <el-menu-item index="2-4-2">选项2</el-menu-item>
-              <el-menu-item index="2-4-3">选项3</el-menu-item>
-            </el-submenu>
-          </el-submenu>
-          <el-menu-item index="3" disabled>消息中心</el-menu-item>
-          <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+          <el-menu-item index="/largescreen/watch" ><i class="el-icon-view"></i><b>可视化大屏</b></el-menu-item>
+
+          <el-menu-item index="/front/home"><i class="el-icon-house"></i><b>首页</b></el-menu-item>
+          <el-menu-item index="/front/article"><i class="el-icon-reading"></i><b>文章列表</b></el-menu-item>
+
+
         </el-menu>
       </div>
       <div style="width: 200px">
@@ -49,6 +37,9 @@
                 <router-link to="/front/person">个人信息</router-link>
               </el-dropdown-item>
               <el-dropdown-item style="font-size: 14px; padding: 5px 0">
+                <router-link to="/home">我的空间</router-link>
+              </el-dropdown-item>
+              <el-dropdown-item style="font-size: 14px; padding: 5px 0">
                 <span style="text-decoration: none" @click="logout">退出</span>
               </el-dropdown-item>
             </el-dropdown-menu>
@@ -58,7 +49,7 @@
     </div>
 
     <div style="width: 1000px; margin: 0 auto">
-      <router-view />
+      <router-view/>
     </div>
   </div>
 </template>
@@ -84,17 +75,21 @@ export default {
 </script>
 
 <style>
-.item{
+.item {
   display: inline-block;
   width: 100px;
 
   text-align: center;
   cursor: pointer
 }
+
 .item a {
-  color: 	#1E90FF;
+  color: #1E90FF;
 }
-.item:hover{
-  background-color: 	LightPink;
+
+.item:hover {
+  background-color: LightPink;
 }
+
+
 </style>

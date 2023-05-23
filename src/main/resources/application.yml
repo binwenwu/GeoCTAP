@@ -5,11 +5,11 @@ server:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://125.220.153.23:31621/geoctap?serverTimezone=GMT%2b8
+    url: jdbc:mysql://125.220.153.23:31621/geoctap?serverTimezone=GMT%2b8 # 数据库地址
     username: root
     password: VubCMiHvT1
   redis:
-    host: 125.220.153.23
+    host: 125.220.153.23 # redis地址
     port: 31352
     password: GWCMnhHUYa
   servlet:
@@ -21,7 +21,7 @@ spring:
       client:
         url: http://localhost:8888  # SpringBoot Admin的服务端地址
         instance:
-          prefer-ip: true # 基于IP地址xiang5服务器注册，默认域名注册
+          prefer-ip: true # 基于IP地址进行服务器注册，默认域名注册
   application:
     name: GeoCTAP  # spb项目名称
 mybatis:
@@ -34,7 +34,7 @@ mybatis-plus:
 
 files:
   upload:
-    path: C:/Users/Jiaoshou/Desktop/GeoCTAP/files/
+    path: C:/Users/Jiaoshou/Desktop/GeoCTAP/files/    # 文件上传路径
 #    path: /home/files/
 
 

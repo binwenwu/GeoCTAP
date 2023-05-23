@@ -24,6 +24,7 @@ const routes = [
     path: '/largescreen',
     name: 'LargeScreen',
     component: () => import('../views/front/LargeScreen.vue'),
+    redirect: '/largescreen/watch',
     children: [
       {
         path: 'watch',
@@ -61,16 +62,12 @@ const routes = [
     path: '/front',
     name: 'Front',
     component: () => import('../views/front/Front'),
+    redirect: '/front/home',
     children: [
       {
         path: 'home',
         name: 'FrontHome',
         component: () => import('../views/front/Home.vue')
-      },
-      {
-        path: 'item1',
-        name: 'Item1',
-        component: () => import('../views/front/Item1.vue')
       },
       {
         path: 'person',
@@ -81,16 +78,6 @@ const routes = [
         path: 'password',
         name: 'FrontPassword',
         component: () => import('../views/front/Password')
-      },
-      {
-        path: 'video',
-        name: 'Video',
-        component: () => import('../views/front/Video')
-      },
-      {
-        path: 'videoDetail',
-        name: 'VideoDetail',
-        component: () => import('../views/front/VideoDetail')
       },
       {
         path: 'article',

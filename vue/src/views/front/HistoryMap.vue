@@ -7,15 +7,12 @@
 export default {
   name: 'HistoryMap',
   data() {
-    return {
-    }
+    return {}
   },
-  created(){
+  created() {
   },
-  computed:{
-  },
-  methods:{
-  },
+  computed: {},
+  methods: {},
 }
 </script>
 <style scoped>
