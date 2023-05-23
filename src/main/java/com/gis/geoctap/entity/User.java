@@ -60,16 +60,18 @@ public class User implements Serializable {
     @ApiModelProperty("角色")
     private String role;
 
-    @TableField(exist = false)
-    private List<Course> courses;
+//    @TableField(exist = false)
+//    private List<Course> courses;
+//
+//    @TableField(exist = false)
+//    private List<Course> stuCourses;
 
-    @TableField(exist = false)
-    private List<Course> stuCourses;
 
-
+    @ApiModelProperty("负责的志愿活动")
     @TableField(exist = false)
     private List<Activity> activitys;
 
+    @ApiModelProperty("报名的志愿活动")
     @TableField(exist = false)
     private List<Activity> norActivitys;
 
