@@ -11,7 +11,7 @@
   >
     <div style="height: 60px; line-height: 60px; text-align: center">
       <!--      <img src="../../public/favicon.jpg" alt="" style="width: 20px; position: relative; top: 5px;">-->
-      <b style="color: white" v-show="logoTextShow"
+      <b style="color: white;font-size: xx-large" v-show="logoTextShow"
       >GeoCTAP </b
       >
     </div>

@@ -1,6 +1,6 @@
 package com.gis.geoctap.service;
 
-import com.gis.geoctap.entity.Children;
+import com.gis.geoctap.entity.Typical;
 import com.baomidou.mybatisplus.extension.service.IService;
 
 /**
@@ -11,6 +11,6 @@ import com.baomidou.mybatisplus.extension.service.IService;
  * @author 吴斌文
  * @since 2023-05-23
  */
-public interface IChildrenService extends IService<Children> {
+public interface ITypicalService extends IService<Typical> {
 
 }

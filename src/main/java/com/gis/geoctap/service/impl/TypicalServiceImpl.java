@@ -1,8 +1,8 @@
 package com.gis.geoctap.service.impl;
 
-import com.gis.geoctap.entity.Children;
-import com.gis.geoctap.mapper.ChildrenMapper;
-import com.gis.geoctap.service.IChildrenService;
+import com.gis.geoctap.entity.Typical;
+import com.gis.geoctap.mapper.TypicalMapper;
+import com.gis.geoctap.service.ITypicalService;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import org.springframework.stereotype.Service;
 
@@ -15,6 +15,6 @@ import org.springframework.stereotype.Service;
  * @since 2023-05-23
  */
 @Service
-public class ChildrenServiceImpl extends ServiceImpl<ChildrenMapper, Children> implements IChildrenService {
+public class TypicalServiceImpl extends ServiceImpl<TypicalMapper, Typical> implements ITypicalService {
 
 }

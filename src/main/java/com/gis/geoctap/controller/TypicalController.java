@@ -7,8 +7,8 @@ import com.gis.geoctap.common.Result;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
-import com.gis.geoctap.service.IChildrenService;
-import com.gis.geoctap.entity.Children;
+import com.gis.geoctap.service.ITypicalService;
+import com.gis.geoctap.entity.Typical;
 
 import org.springframework.web.bind.annotation.RestController;
 
@@ -23,47 +23,47 @@ import java.util.List;
  * @since 2023-05-23
  */
 @RestController
-@RequestMapping("/children")
-public class ChildrenController {
+@RequestMapping("/typical")
+public class TypicalController {
 
     @Resource
-    private IChildrenService childrenService;
+    private ITypicalService typicalService;
 
     // 新增或者更新
     @PostMapping
-    public Result save(@RequestBody Children children) {
-        childrenService.saveOrUpdate(children);
+    public Result save(@RequestBody Typical typical) {
+        typicalService.saveOrUpdate(typical);
         return Result.success();
     }
 
     @DeleteMapping("/{id}")
     public Result delete(@PathVariable Integer id) {
-        childrenService.removeById(id);
+        typicalService.removeById(id);
         return Result.success();
     }
 
     @PostMapping("/del/batch")
     public Result deleteBatch(@RequestBody List<Integer> ids) {
-        childrenService.removeByIds(ids);
+        typicalService.removeByIds(ids);
         return Result.success();
     }
 
     @GetMapping
     public Result findAll() {
-        return Result.success(childrenService.list());
+        return Result.success(typicalService.list());
     }
 
     @GetMapping("/{id}")
     public Result findOne(@PathVariable Integer id) {
-        return Result.success(childrenService.getById(id));
+        return Result.success(typicalService.getById(id));
     }
 
     @GetMapping("/page")
     public Result findPage(@RequestParam Integer pageNum,
                                 @RequestParam Integer pageSize) {
-        QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
+        QueryWrapper<Typical> queryWrapper = new QueryWrapper<>();
         queryWrapper.orderByDesc("id");
-        return Result.success(childrenService.page(new Page<>(pageNum, pageSize), queryWrapper));
+        return Result.success(typicalService.page(new Page<>(pageNum, pageSize), queryWrapper));
     }
 
 }
