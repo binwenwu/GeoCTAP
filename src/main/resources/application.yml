@@ -54,3 +54,9 @@ management:
         enabled: true
     enabled-by-default: true  # 开启所有监控端点
 
+geoserver:
+  username: admin
+  password: ypfamily608
+  url: http://125.220.153.22:8093/geoserver
+  workspace: GISProj
+
