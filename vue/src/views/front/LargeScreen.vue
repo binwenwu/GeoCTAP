@@ -5,7 +5,7 @@
       <UserHeader></UserHeader>
     </el-header>
     <el-main>
-      <router-view style="color: white;" @refreshUser="getUser"/>
+      <router-view style="color: white;"/>
     </el-main>
   </el-container>
 </template>
@@ -17,37 +17,31 @@ export default {
   name: "LargeScreen",
   data() {
     return {
-      
     }
   },
   components: {
     UserHeader,
   },
   created() {
-    // 从后台获取最新的User数据
-    this.getUser()
   },
   methods: {
-    getUser() {
-      let username = localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")).username : ""
-      if (username) {
-        // 从后台获取User数据
-        this.request.get("/user/username/" + username).then(res => {
-          // 重新赋值后台的最新User数据
-          this.user = res.data
-        })
-      }
-    }
   }
 }
 </script>
 
 <style scoped>
 .el-container {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   height: 100vh;
   background: url("../../assets/Bg.png") no-repeat;
   /* 以父元素的百分比来设置背景图像的宽度和高度。*/
   background-size: 100% 100%;
   overflow: hidden;
+  user-select: none;
+}
+.el-main {
+  background-image: url(../../assets/card.png);
+  /* 以父元素的百分比来设置背景图像的宽度和高度。*/
+  background-size: 100% 100%;
 }
 </style>

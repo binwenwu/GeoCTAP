@@ -1,7 +1,7 @@
 <template>
-  <div>
+  <el-card class="box-card" shadow="never">
     网络模块
-  </div>
+  </el-card>
 </template>
 <script>
 export default {
@@ -19,5 +19,10 @@ export default {
 }
 </script>
 <style scoped>
-
+.box-card {
+  background-color: transparent;
+  height: 100%;
+  width: 100%;
+  border: none;
+}
 </style>

@@ -11,7 +11,8 @@ import request from "@/utils/request";
 import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
-
+// 引入echarts
+import * as echarts from 'echarts';
 
 // use
 Vue.use(mavonEditor)

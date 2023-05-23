@@ -42,9 +42,9 @@ const routes = [
         component: () => import('../views/front/Query.vue')
       },
       {
-        path: 'historymap',
-        name: 'HistoryMap',
-        component: () => import('../views/front/HistoryMap.vue')
+        path: 'storymap',
+        name: 'StoryMap',
+        component: () => import('../views/front/StoryMap.vue')
       },
       {
         path: 'topicmap',

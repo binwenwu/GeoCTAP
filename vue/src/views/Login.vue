@@ -118,6 +118,7 @@ export default {
 
 <style scoped>
 .wrapper {
+  font-family: "Helvetica Neue",Helvetica,"PingFang SC","Hiragino Sans GB","Microsoft YaHei","微软雅黑",Arial,sans-serif;
   height: 100vh;
   background: url("../assets/Bg.png") no-repeat;
   /* 以父元素的百分比来设置背景图像的宽度和高度。*/

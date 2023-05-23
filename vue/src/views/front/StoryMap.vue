@@ -1,11 +1,13 @@
 <template>
   <el-card class="box-card" shadow="never">
-    分析模块
+    故事地图模块
   </el-card>
 </template>
 <script>
 export default {
-  name: 'Analysis',
+  name: 'HistoryMap',
+  components: {
+  },
   data() {
     return {
     }
