@@ -10,14 +10,14 @@
       <el-col :span="2" :pull="2"><router-link class="navi-a" active-class="active" :to="{name:'Watch'}">
         <i class="el-icon-data-line"></i>数据监测</router-link></el-col>
       <el-col :span="2" :pull="3"><router-link class="navi-a" active-class="active" :to="{name:'Network'}">
-        <i class="el-icon-magic-stick"></i>网络分析</router-link></el-col>
+        <i class="el-icon-share"></i>轨迹分析</router-link></el-col>
       <el-col :span="2" :pull="4"><router-link class="navi-a" active-class="active" :to="{name:'Query'}">
         <i class="el-icon-search"></i>数据查询</router-link></el-col>
       <el-col :span="2" :push="5"><router-link class="navi-a" active-class="active" :to="{name:'StoryMap'}">
         <i class="el-icon-map-location"></i>故事地图</router-link></el-col>
       <el-col :span="2" :push="4"><router-link class="navi-a" active-class="active" :to="{name:'TopicMap'}">
         <i class="el-icon-copy-document"></i>专题地图</router-link></el-col>
-      <el-col :span="2" :push="3"><router-link class="navi-a" :to="{name:'Analysis'}"><i class="el-icon-data-analysis"></i>时空分析</router-link></el-col>
+      <el-col :span="2" :push="3"><router-link class="navi-a" :to="{name:'Analysis'}"><i class="el-icon-s-operation"></i>时空分析</router-link></el-col>
       <!-- <el-col :span="2"><el-button type="primary" icon="el-icon-full-screen" style="position: relative;top:5.5vh"></el-button></el-col> -->
       <el-col :span="2"></el-col>
     </el-row>
