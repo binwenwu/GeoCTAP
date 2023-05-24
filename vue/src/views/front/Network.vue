@@ -1,6 +1,8 @@
 <template>
   <el-card class="box-card" shadow="never">
-    <div id="container" style="width: 600px; height: 400px"></div>
+
+    <div id="container" style="width: 100%;height: 800px"></div>
+
   </el-card>
 </template>
 
@@ -44,85 +46,108 @@ import {
 
 export default {
   name: 'Network',
+  data() {
+    return {
+      optionSelect: 2,
+      option1: {},
+      option2: {},
+    }
+  },
   mounted() {
-    var dom = document.getElementById('container');
-    var myChart = this.$echarts.init(dom, null, {
-      renderer: 'canvas',
-      useDirtyRect: false
-    });
 
-    var ROOT_PATH = 'https://cdn.jsdelivr.net/gh/apache/echarts-website@asf-site/examples';
+    this.initOptions()
+    this.initChart(this.optionSelect)
 
-
-    var option1 = {
-      backgroundColor: '#000',
-      globe: {
-        baseTexture: world_topo_bathy_200401,
-        heightTexture: world_topo_bathy_200401,
-        displacementScale: 0.04,
-        shading: 'realistic',
-        environment: starfield,
-        realisticMaterial: {
-          roughness: 0.9
-        },
-        postEffect: {
-          enable: true
-        },
-        light: {
-          main: {
-            intensity: 5,
-            shadow: true
+  },
+  methods: {
+    initOptions() {
+       this.option1 = {
+        backgroundColor: '#000',
+        globe: {
+          baseTexture: world_topo_bathy_200401,
+          heightTexture: world_topo_bathy_200401,
+          displacementScale: 0.04,
+          shading: 'realistic',
+          environment: starfield,
+          realisticMaterial: {
+            roughness: 0.9
           },
-          ambientCubemap: {
-            texture: 'https://gitee.com/enjoy1234/git-learning/raw/master/echarts3D/pisa.hdr',
-            diffuseIntensity: 0.2
+          postEffect: {
+            enable: true
+          },
+          viewControl: {
+            autoRotate: false,
+            targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
+          },
+          light: {
+            main: {
+              intensity: 5,
+              shadow: true
+            },
+            ambientCubemap: {
+              //texture: 'https://gitee.com/enjoy1234/git-learning/raw/master/echarts3D/pisa.hdr',
+              texture: '../../assets/echarts3D/pisa.hdr',
+              diffuseIntensity: 0.2
+            }
           }
         }
-      }
-    };
+      };
 
-    var option2 = {
-      backgroundColor: '#000',
-      globe: {
-        baseTexture: earth,
-        heightTexture: bathymetry_bw_composite_4k,
-        displacementScale: 0.1,
-        shading: 'lambert',
-        environment: starfield,
-        light: {
-          ambient: {
-            intensity: 0.1
+      this.option2 = {
+        backgroundColor: '#000',
+        globe: {
+          baseTexture: earth,
+          heightTexture: bathymetry_bw_composite_4k,
+          displacementScale: 0.1,
+          shading: 'lambert',
+          environment: starfield,
+          light: {
+            ambient: {
+              intensity: 0.1
+            },
+            main: {
+              intensity: 1.5
+            }
           },
-          main: {
-            intensity: 1.5
-          }
+          viewControl: {
+            autoRotate: false,
+            targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
+          },
+
+          layers: [
+            {
+              type: 'blend',
+              blendTo: 'emission',
+              texture: night
+            },
+            {
+              type: 'overlay',
+              texture: clouds,
+              shading: 'lambert',
+              distance: 5
+            }
+          ]
         },
-        layers: [
-          {
-            type: 'blend',
-            blendTo: 'emission',
-            texture: night
-          },
-          {
-            type: 'overlay',
-            texture: clouds,
-            shading: 'lambert',
-            distance: 5
-          }
-        ]
-      },
-      series: []
-    };
+        series: []
+      };
+    },
 
+    initChart(optionSelect){
+      var dom = document.getElementById('container');
+      var myChart = this.$echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+      });
 
-    var option = option2
-    if (option && typeof option === 'object') {
-      myChart.setOption(option);
+      var option = optionSelect == 1 ? this.option1 : this.option2;
+      if (option && typeof option === 'object') {
+        myChart.setOption(option);
+      }
+      window.addEventListener('resize', myChart.resize);
     }
+  }
 
-    window.addEventListener('resize', myChart.resize);
-  },
-  methods: {}
+
 }
 </script>
 

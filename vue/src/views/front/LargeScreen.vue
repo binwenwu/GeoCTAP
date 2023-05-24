@@ -37,7 +37,7 @@ export default {
       this.$refs.header.$el.style.display = this.displayStatus;
       this.fSPosition = this.fSPosition === "15vh" ? "3vh" : "15vh";
       this.$refs.fScreen.style.top = this.fSPosition;
-      this.$refs.icon.classList.remove(this.iconStyle) 
+      this.$refs.icon.classList.remove(this.iconStyle)
       this.iconStyle = this.iconStyle === "el-icon-full-screen" ? "el-icon-close" : "el-icon-full-screen"
     }
   }
