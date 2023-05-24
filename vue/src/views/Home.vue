@@ -21,38 +21,52 @@
       </div>
     </el-card>
     <div style="height: 1px; background: #ddd; margin: 20px 0"/>
+    <el-card>
     <el-row :gutter="30">
-      <el-col :span="12">
+      <el-col :span="8">
         <div style="padding: 20px 0; font-size: 20px"><b>GIS工程设计与开发前后端分离项目框架</b></div>
         <div class="m-10">
-         <el-button type="danger"><i class="el-icon-coin"></i> 免费开源</el-button>
-          <el-button type="primary"><i class="el-icon-link"></i> <a style="color: #fff" href="https://github.com/BinwenWu/GeoCTAP">Github源码</a></el-button>
+          <el-button type="primary" style="margin-left: 50px"><i class="el-icon-link"></i> <a style="color: #fff" href="https://github.com/BinwenWu/GeoCTAP">Github源码</a></el-button>
+          <el-button type="danger" style="margin-left: 120px"><i class="el-icon-link"></i> <a style="color: #fff;" href="https://gitee.com/wu-binwen123/GeoCTAP">Gitee源码</a></el-button>
         </div>
         <img src="@/assets/github.png" alt="" style="margin: 10px 0;width: 220px">
+        <img src="@/assets/gitee.png" alt="" style="margin: 10px 0;width: 220px">
       </el-col>
-      <el-col :span="12">
+      <el-col :span="15">
         <div style="padding: 20px 0; font-size: 20px"><b>技术栈</b></div>
         <el-row>
-          <el-col :span="12" style="line-height: 30px">
+          <el-col :span="8" style="line-height: 30px">
             <div><b>后端</b></div>
             <div>SpringBoot2</div>
             <div>Hutool</div>
             <div>Apache POI</div>
             <div>Lombok</div>
             <div>Mybatis/Mybatis-plus</div>
+            <div>JWT</div>
           </el-col>
-          <el-col :span="12" style="line-height: 30px">
+          <el-col :span="8" style="line-height: 30px">
             <b>前端</b>
             <div>Vue2</div>
             <div>Vue-Router</div>
             <div>VueX</div>
             <div>ElementUI</div>
             <div>Axios</div>
+            <div>Echarts</div>
+            <div>Openlayers</div>
           </el-col>
+          <el-col :span="8" style="line-height: 30px">
+            <b>其他</b>
+            <div>Redis</div>
+            <div>GeoServer</div>
+            <div>Docker</div>
+            <div>Containerd + K8S</div>
+          </el-col>
+
         </el-row>
+
       </el-col>
     </el-row>
-
+    </el-card>
   </div>
 </template>
 

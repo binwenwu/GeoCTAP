@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div style="width: 1000px; margin: 0 auto">
+    <div style="width:95%; margin: 0 auto">
       <router-view/>
     </div>
   </div>

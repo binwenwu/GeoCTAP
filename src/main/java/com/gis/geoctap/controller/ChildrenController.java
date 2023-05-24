@@ -1,9 +1,6 @@
 package com.gis.geoctap.controller;
 
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
-import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
-import com.gis.geoctap.common.Result;
 import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
@@ -12,15 +9,13 @@ import com.gis.geoctap.entity.Children;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-
 /**
  * <p>
  *  前端控制器
  * </p>
  *
  * @author 吴斌文
- * @since 2023-05-23
+ * @since 2023-05-24
  */
 @RestController
 @RequestMapping("/children")

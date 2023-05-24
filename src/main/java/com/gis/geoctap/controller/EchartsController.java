@@ -6,17 +6,23 @@ import cn.hutool.core.date.Quarter;
 import cn.hutool.core.lang.TypeReference;
 import cn.hutool.core.util.StrUtil;
 import cn.hutool.json.JSONUtil;
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.gis.geoctap.common.Constants;
 import com.gis.geoctap.common.Result;
 import com.gis.geoctap.config.AuthAccess;
+import com.gis.geoctap.entity.Article;
 import com.gis.geoctap.entity.Files;
+import com.gis.geoctap.entity.Children;
 import com.gis.geoctap.entity.User;
+import com.gis.geoctap.mapper.ChildrenMapper;
 import com.gis.geoctap.mapper.FileMapper;
 import com.gis.geoctap.service.IUserService;
+import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import javax.annotation.Resource;
@@ -34,6 +40,9 @@ public class EchartsController {
 
     @Resource
     private FileMapper fileMapper;
+
+    @Resource
+    private ChildrenMapper childrenMapper;
 
     @Autowired
     private StringRedisTemplate stringRedisTemplate;
@@ -85,6 +94,20 @@ public class EchartsController {
             }, true);
         }
         return Result.success(files);
+    }
+
+
+
+    @AuthAccess
+    @GetMapping("/file/front/random")
+//    @Cacheable(value = "files" ,key = "'frontAll'")
+    public Result frontAll2( @RequestParam Integer id) {
+        List<Children> children;
+        QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
+        //queryWrapper.like("volunteer", volunteer);
+        queryWrapper.between("id", id,id+23);
+        children = childrenMapper.selectList(queryWrapper);  // 3. 从数据库取出数据
+        return Result.success(children);
     }
 
 }
