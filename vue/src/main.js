@@ -12,7 +12,13 @@ import mavonEditor from 'mavon-editor'
 import 'mavon-editor/dist/css/index.css'
 
 // 引入echarts
-import * as echarts from 'echarts';
+//引入echarts
+import * as echarts from 'echarts'
+//vue全局注入echarts
+Vue.prototype.$echarts = echarts;
+
+
+
 
 // use
 Vue.use(mavonEditor)

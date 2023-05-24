@@ -1,0 +1,80 @@
+<!--
+	此示例下载自 https://echarts.apache.org/examples/zh/editor.html?c=globe-layers&gl=1&version=5.4.2
+-->
+<!DOCTYPE html>
+<html lang="zh-CN" style="height: 100%">
+<head>
+    <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+<div id="container" style="height: 100%"></div>
+
+
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/echarts.min.js"></script>
+
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/extension/dataTool.min.js"></script>
+
+
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-gl@2/dist/echarts-gl.min.js"></script>
+
+
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts-stat@latest/dist/ecStat.min.js"></script>
+
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/china.js"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+
+<script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=ZVOe4dTkmGGPT8ebIZCGHKUGbsdkbkyW"></script>
+<script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5.4.2/dist/extension/bmap.min.js"></script>
+
+
+<script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+        renderer: 'canvas',
+        useDirtyRect: false
+    });
+    var app = {};
+    var ROOT_PATH = 'https://echarts.apache.org/examples';
+    var option;
+
+    option = {
+        backgroundColor: '#000',
+        globe: {
+            baseTexture: ROOT_PATH + '/data-gl/asset/earth.jpg',
+            heightTexture: ROOT_PATH + '/data-gl/asset/bathymetry_bw_composite_4k.jpg',
+            displacementScale: 0.1,
+            shading: 'lambert',
+            environment: ROOT_PATH + '/data-gl/asset/starfield.jpg',
+            light: {
+                ambient: {
+                    intensity: 0.1
+                },
+                main: {
+                    intensity: 1.5
+                }
+            },
+            layers: [
+                {
+                    type: 'blend',
+                    blendTo: 'emission',
+                    texture: ROOT_PATH + '/data-gl/asset/night.jpg'
+                },
+                {
+                    type: 'overlay',
+                    texture: ROOT_PATH + '/data-gl/asset/clouds.png',
+                    shading: 'lambert',
+                    distance: 5
+                }
+            ]
+        },
+        series: []
+    };
+
+    if (option && typeof option === 'object') {
+        myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+</script>
+</body>
+</html>

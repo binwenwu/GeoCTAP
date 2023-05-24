@@ -70,12 +70,6 @@ export default {
     }
   },
   created() {
-    // this.request.get("/echarts/file/front/all").then(res => {
-    //   console.log(res.data)
-    //   this.files = res.data.filter(v => v.type === 'png' || v.type === 'jpg' || v.type === 'webp')
-    // })
-
-
     this.randomID();
     this.load()
   },
@@ -122,13 +116,6 @@ export default {
       const overlay = img.nextElementSibling;
       img.style.transform = ""; // 恢复原始大小
       overlay.style.opacity = "0"; // 隐藏悬浮框
-    },
-    handleClose(done) {
-      this.$confirm('确认关闭？')
-          .then(_ => {
-            done();
-          })
-          .catch(_ => {});
     },
     show(item){
       this.item = item;
