@@ -6,8 +6,14 @@
         <el-row :gutter="20">
           <el-col :span="3.0" v-for="item in children" :key="item.id" style="margin-bottom: 10px">
             <div style="border: 1px solid #ccc; padding-bottom: 0px">
-              <div class="photo" @mouseover="zoomIn($event)" @mouseout="zoomOut($event)">
-                <img :src="getImagePath(item.photo)" alt="" style="width: 100%;height:235px">
+              <div class="photo" @mouseover="zoomIn($event)" @mouseout="zoomOut($event)" @click="show(item)">
+                <el-popover
+                    placement="top-start"
+                    width="200"
+                    trigger="hover"
+                    :content="getBaseInfo(item)">
+                  <img slot="reference" :src="getImagePath(item.photo)" alt="" style="width: 100%;height:235px">
+                </el-popover>
               </div>
             </div>
           </el-col>
@@ -15,6 +21,37 @@
       </div>
     </el-card>
 
+
+    <el-dialog title="人物信息" :visible.sync="dialogVisible" width="30%">
+      <div class="photo"><img :src="getImagePath(this.item.photo)" alt="" style="width: auto;height:235px;margin-bottom: 20px"></div>
+      <el-form ref="form" :model="form" label-width="100px">
+        <el-form-item label="姓名">
+          <el-input v-model="item.childName"></el-input>
+        </el-form-item>
+        <el-form-item label="性别">
+          <el-radio-group v-model="item.sex">
+            <el-radio label="男"></el-radio>
+            <el-radio label="女"></el-radio>
+          </el-radio-group>
+        </el-form-item>
+        <el-form-item label="出生日期">
+          <el-input v-model="item.birthday"></el-input>
+        </el-form-item>
+        <el-form-item label="登记日期">
+          <el-input v-model="item.regTime"></el-input>
+        </el-form-item>
+        <el-form-item label="跟进志愿者">
+          <el-input v-model="item.volunteer"></el-input>
+        </el-form-item>
+        <el-form-item label="失踪地址">
+          <el-input type="textarea" v-model="item.place"></el-input>
+        </el-form-item>
+        <el-form-item label="特征描述">
+          <el-input type="textarea" v-model="item.feature"></el-input>
+        </el-form-item>
+      </el-form>
+
+    </el-dialog>
   </div>
 </template>
 
@@ -25,9 +62,11 @@ export default {
     return {
       files: [],
       children: [],
-      id:1,
+      id: 1,
       showOverlay: false, // 控制悬浮框显示和隐藏的变量
-      hoveredImage: null // 添加hoveredImage属性
+      hoveredImage: null, // 添加hoveredImage属性
+      dialogVisible: false,
+      item: []
     }
   },
   created() {
@@ -48,7 +87,10 @@ export default {
         return photo;
       }
     },
-    load(){
+    getBaseInfo(item) {
+      return item.childName + " " + item.sex
+    },
+    load() {
       this.request.get("/echarts/file/front/random", {
         params: {
           id: this.id
@@ -58,12 +100,12 @@ export default {
         this.children = res.data
       })
     },
-    flash(){
+    flash() {
 
       this.randomID();
       this.load()
     },
-    randomID(){
+    randomID() {
       //产生一个随机数，范围是1-39788
       this.id = Math.floor(Math.random() * 39788 + 1)
     },
@@ -81,6 +123,17 @@ export default {
       img.style.transform = ""; // 恢复原始大小
       overlay.style.opacity = "0"; // 隐藏悬浮框
     },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
+    },
+    show(item){
+      this.item = item;
+      this.dialogVisible = true;
+    }
   }
 }
 </script>
@@ -112,8 +165,6 @@ export default {
   opacity: 0;
   transition: opacity 0.3s ease;
 }
-
-
 
 
 </style>
