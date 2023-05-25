@@ -1,0 +1,365 @@
+[
+  [
+    [
+      {
+        "name": "符建涛",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "彭冬英"
+      },
+      {
+        "name": "警察卢保磊"
+      },
+      {
+        "name": "人贩子"
+      }
+    ],
+    [
+      {
+        "name": "沈云贵",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "陈勇林"
+      },
+      {
+        "name": "沈海江"
+      },
+      {
+        "name": "沈英"
+      },
+      {
+        "name": "人贩子"
+      }
+    ],
+    [
+      {
+        "name": "杨妞花",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "杨新民"
+      },
+      {
+        "name": "杨妞花母亲"
+      },
+      {
+        "name": "杨妞花堂妹"
+      },
+      {
+        "name": "人贩子"
+      }
+    ],
+    [
+      {
+        "name": "苗元胜",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "父母"
+      },
+      {
+        "name": "养父母"
+      },
+      {
+        "name": "孙根"
+      }
+    ],
+    [
+      {
+        "name": "小伟",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "代氏夫妇"
+      },
+      {
+        "name": "人贩子"
+      }
+    ],
+    [
+      {
+        "name": "彭文乐",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "彭高峰"
+      },
+      {
+        "name": "大学生"
+      },
+      {
+        "name": "人贩子"
+      }
+    ],
+    [
+      {
+        "name": "孙卓",
+        "itemStyle": {
+          "normal": {
+            "color": "#FCBB5B",
+            "bordercolor": "#FCBB5B"
+          }
+        }
+      },
+      {
+        "name": "孙海洋"
+      },
+      {
+        "name": "人贩子"
+      }
+    ]
+  ],
+  [
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "儿子"
+      },
+      {
+        "source": 0,
+        "target": 3,
+        "value": "被拐"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "母亲"
+      },
+      {
+        "source": 2,
+        "target": 1,
+        "value": "帮助"
+      },
+      {
+        "source": 3,
+        "target": 0,
+        "value": "拐卖"
+      }
+    ],
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "朋友"
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "value": "儿子"
+      },
+      {
+        "source": 0,
+        "target": 3,
+        "value": "弟弟"
+      },
+      {
+        "source": 0,
+        "target": 4,
+        "value": "被拐"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "朋友"
+      },
+      {
+        "source": 1,
+        "target": 4,
+        "value": "被拐"
+      },
+      {
+        "source": 2,
+        "target": 0,
+        "value": "父亲"
+      },
+      {
+        "source": 3,
+        "target": 0,
+        "value": "姐姐"
+      }
+    ],
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "女儿"
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "value": "女儿"
+      },
+      {
+        "source": 0,
+        "target": 3,
+        "value": "堂姐"
+      },
+      {
+        "source": 0,
+        "target": 4,
+        "value": "被拐"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "父亲"
+      },
+      {
+        "source": 1,
+        "target": 2,
+        "value": "夫妻"
+      },
+      {
+        "source": 2,
+        "target": 0,
+        "value": "母亲"
+      },
+      {
+        "source": 2,
+        "target": 1,
+        "value": "夫妻"
+      },
+      {
+        "source": 3,
+        "target": 0,
+        "value": "堂妹"
+      },
+      {
+        "source": 4,
+        "target": 0,
+        "value": "拐卖"
+      }
+    ],
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "儿子"
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "value": "养子"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "父母"
+      },
+      {
+        "source": 2,
+        "target": 0,
+        "value": "养父母"
+      },
+      {
+        "source": 3,
+        "target": 0,
+        "value": "帮助"
+      }
+    ],
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "儿子"
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "value": "被拐"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "父母"
+      },
+      {
+        "source": 2,
+        "target": 0,
+        "value": "拐卖"
+      }
+    ],
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "儿子"
+      },
+      {
+        "source": 0,
+        "target": 3,
+        "value": "被拐"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "父亲"
+      },
+      {
+        "source": 2,
+        "target": 1,
+        "value": "帮助"
+      },
+      {
+        "source": 3,
+        "target": 0,
+        "value": "拐卖"
+      }
+    ],
+    [
+      {
+        "source": 0,
+        "target": 1,
+        "value": "儿子"
+      },
+      {
+        "source": 0,
+        "target": 2,
+        "value": "被拐"
+      },
+      {
+        "source": 1,
+        "target": 0,
+        "value": "父亲"
+      },
+      {
+        "source": 2,
+        "target": 0,
+        "value": "拐卖"
+      }
+    ]
+  ]
+]

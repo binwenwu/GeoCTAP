@@ -1,5 +1,5 @@
 <template>
-  <div style="color: #666">
+  <div style="color: #666;margin: 30px 100px">
     <div style="margin: 10px 0">
       <el-input size="small" style="width: 300px" placeholder="请输入名称" suffix-icon="el-icon-search" v-model="name"></el-input>
       <el-button class="ml-5" type="primary" @click="load" size="small">搜索</el-button>

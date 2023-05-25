@@ -1,5 +1,5 @@
 <template>
-  <div style="color: #666">
+  <div style="color: #666;margin: 30px 100px">
     <div style="margin: 20px 0; ">
       <div class="pd-10" style="font-size: 20px; color: #3F5EFB; cursor: pointer">{{ article.name }}</div>
       <div style="font-size: 14px; margin-top: 10px">

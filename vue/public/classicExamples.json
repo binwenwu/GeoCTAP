@@ -1,0 +1,533 @@
+﻿[
+    {
+        "eventdate": "2007年12月28日",
+        "location": "深圳南山",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "113.9365392",
+        "latitude": "22.5385002",
+        "event": "符建涛：在小区走丢，被人贩子拐走；彭冬英：开始在小区里一遍又一遍地寻找，找到小区保安，然后报了警"
+    },
+    {
+        "eventdate": "2007年12月29日",
+        "location": "深圳南山",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "113.9365392",
+        "latitude": "22.5385002",
+        "event": "彭冬英：贴寻人启事，通宵注册QQ发帖寻找，登记寻亲网站"
+    },
+    {
+        "eventdate": "2008年1月1日",
+        "location": "山东聊城",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "115.9915878",
+        "latitude": "36.46275819",
+        "event": "符建涛：被人贩子拐到山东聊城"
+    },
+    {
+        "eventdate": "2021年1月1日",
+        "location": "北京",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "116.4133837",
+        "latitude": "39.91092455",
+        "event": "公安部：公安部部署开展为期一年的“团圆”行动，全力侦破拐卖儿童积案"
+    },
+    {
+        "eventdate": "2021年9月2日",
+        "location": "山东聊城",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "115.9915878",
+        "latitude": "36.46275819",
+        "event": "广东省公安局：线索出现，山东聊城一男子，与符建涛高度相似。"
+    },
+    {
+        "eventdate": "2021年9月3日",
+        "location": "山东聊城",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "115.9915878",
+        "latitude": "36.46275819",
+        "event": "警察卢保磊：采集血样，DNA鉴定"
+    },
+    {
+        "eventdate": "2021年12月6日",
+        "location": "深圳南山",
+        "example_id": "0",
+        "child_name": "符建涛",
+        "longitude": "113.9365392",
+        "latitude": "22.5385002",
+        "event": "符建涛：与亲生父母现场相认；彭冬英：与失散已久的孩子现场相认"
+    },
+    {
+        "eventdate": "1999年5月19日",
+        "location": "昆明官渡区",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "102.7504817",
+        "latitude": "25.02119642",
+        "event": "沈云贵：在楼下玩耍的沈云贵和年龄相仿的玩伴陈勇林一起失踪"
+    },
+    {
+        "eventdate": "1999年5月20日",
+        "location": "昆明官渡区",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "102.7504817",
+        "latitude": "25.02119642",
+        "event": "沈海江：四处打听消息"
+    },
+    {
+        "eventdate": "1999年6月1日",
+        "location": "福建",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "119.3024475",
+        "latitude": "26.10633942",
+        "event": "沈云贵：被拐到福建"
+    },
+    {
+        "eventdate": "1999年6月2日",
+        "location": "河南",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "113.7593841",
+        "latitude": "34.77171292",
+        "event": "沈海江：前往多个城市寻找儿子"
+    },
+    {
+        "eventdate": "1999年6月2日",
+        "location": "河北",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "114.5365963",
+        "latitude": "38.04320165",
+        "event": "沈海江：前往多个城市寻找儿子"
+    },
+    {
+        "eventdate": "1999年6月4日",
+        "location": "山东",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "117.0274416",
+        "latitude": "36.67485665",
+        "event": "沈海江：前往多个城市寻找儿子"
+    },
+    {
+        "eventdate": "2005年1月1日",
+        "location": "贵州",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "106.713478",
+        "latitude": "26.578343",
+        "event": "沈英：通过网络的方式扩散弟弟的信息"
+    },
+    {
+        "eventdate": "2009年1月1日",
+        "location": "昆明",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "102.8394451",
+        "latitude": "24.88627211",
+        "event": "沈英：到外省寻找弟弟的线索"
+    },
+    {
+        "eventdate": "2020年1月1日",
+        "location": "贵州",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "106.713478",
+        "latitude": "26.578343",
+        "event": "沈英：用直播的方式在网上寻找弟弟"
+    },
+    {
+        "eventdate": "2023年5月6日",
+        "location": "福建",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "119.3024475",
+        "latitude": "26.10633942",
+        "event": "贵州普安县警方：沈海江失踪24年的儿子沈云贵在福建找到了"
+    },
+    {
+        "eventdate": "2023年5月19日",
+        "location": "贵州普安",
+        "example_id": "1",
+        "child_name": "沈云贵",
+        "longitude": "104.9595458",
+        "latitude": "25.78995177",
+        "event": "沈云贵：与家人现场相认；沈海江：与失踪24年的儿子相认"
+    },
+    {
+        "eventdate": "1995年1月1日",
+        "location": "贵州贵阳",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "106.6365768",
+        "latitude": "26.65332482",
+        "event": "杨妞花：在贵州被拐；杨新民：开始寻找丢失的女儿"
+    },
+    {
+        "eventdate": "1995年2月1日",
+        "location": "河北省邯郸市",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "114.5456282",
+        "latitude": "36.63126273",
+        "event": "杨妞花：被人贩子拐卖到河北省邯郸市"
+    },
+    {
+        "eventdate": "1997年1月1日",
+        "location": "贵州贵阳",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "106.6365768",
+        "latitude": "26.65332482",
+        "event": "杨新民：去世"
+    },
+    {
+        "eventdate": "1998年1月1日",
+        "location": "贵州贵阳",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "106.6365768",
+        "latitude": "26.65332482",
+        "event": "杨妞花母亲：母亲精神出了问题，第二年也走了"
+    },
+    {
+        "eventdate": "2008年1月1日",
+        "location": "江苏",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "118.7695516",
+        "latitude": "32.06677694",
+        "event": "杨妞花：13岁开始外出打工"
+    },
+    {
+        "eventdate": "2021年1月1日",
+        "location": "河北省邯郸市",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "114.5456282",
+        "latitude": "36.63126273",
+        "event": "杨妞花：通过网络找到自己的亲人"
+    },
+    {
+        "eventdate": "2021年1月2日",
+        "location": "贵州贵阳",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "106.6365768",
+        "latitude": "26.65332482",
+        "event": "杨妞花的堂妹：从长辈口中得知杨妞花被拐卖的事情，看到视频后立即与杨妞花取得了联系"
+    },
+    {
+        "eventdate": "2022年1月1日",
+        "location": "贵州",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "106.713478",
+        "latitude": "26.578343",
+        "event": "杨妞花：找到贵州警方，并提供线索"
+    },
+    {
+        "eventdate": "2022年2月1日",
+        "location": "贵州",
+        "example_id": "2",
+        "child_name": "杨妞花",
+        "longitude": "106.713478",
+        "latitude": "26.578343",
+        "event": "民警：贵阳市公安局南明分局的民警将嫌疑人余某某抓获"
+    },
+    {
+        "eventdate": "1966年1月1日",
+        "location": "浙江",
+        "example_id": "3",
+        "child_name": "苗元胜",
+        "longitude": "120.1595331",
+        "latitude": "30.27154839",
+        "event": "苗元胜：因为家里穷被父母送走"
+    },
+    {
+        "eventdate": "1967年1月1日",
+        "location": "山东",
+        "example_id": "3",
+        "child_name": "苗元胜",
+        "longitude": "117.0274416",
+        "latitude": "36.67485665",
+        "event": "苗元胜：被他山东的养父母收养"
+    },
+    {
+        "eventdate": "2012年1月1日",
+        "location": "山东",
+        "example_id": "3",
+        "child_name": "苗元胜",
+        "longitude": "117.0274416",
+        "latitude": "36.67485665",
+        "event": "苗元胜：委托南浔圆梦志愿者协会帮助寻亲"
+    },
+    {
+        "eventdate": "2021年1月1日",
+        "location": "浙江",
+        "example_id": "3",
+        "child_name": "苗元胜",
+        "longitude": "120.1595331",
+        "latitude": "30.27154839",
+        "event": "南浔圆梦志愿者协会负责人孙根：在DNA大数据库的帮助下，辗转找到了南浔区南浔镇沈庄漾村的沈惠琴家中"
+    },
+    {
+        "eventdate": "2022年1月1日",
+        "location": "浙江省湖州市南浔区",
+        "example_id": "3",
+        "child_name": "苗元胜",
+        "longitude": "120.4246014",
+        "latitude": "30.85524298",
+        "event": "苗元胜：与失散56年的母亲金阿娥相聚"
+    },
+    {
+        "eventdate": "1998年1月1日",
+        "location": "贵州",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "106.713478",
+        "latitude": "26.578343",
+        "event": "小伟：5岁的小伟在家附近的菜市场走失；代氏夫妇：向公安机关报警，同时反复在当地车站、市场等地寻找"
+    },
+    {
+        "eventdate": "1999年1月1日",
+        "location": "广东省汕头市",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "116.6885286",
+        "latitude": "23.35909172",
+        "event": "小伟：被拐卖到广东省汕头市一户人家"
+    },
+    {
+        "eventdate": "2003年1月1日",
+        "location": "广东",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "113.2724289",
+        "latitude": "23.13794856",
+        "event": "小伟：难以忍受家庭暴力的小伟离家出走，开始在社会上游荡，靠乞讨、打零工为生。"
+    },
+    {
+        "eventdate": "2012年1月1日",
+        "location": "广东",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "113.2724289",
+        "latitude": "23.13794856",
+        "event": "小伟：小伟因故意伤害罪被判处有期徒刑4年"
+    },
+    {
+        "eventdate": "2020年11月1日",
+        "location": "广东省揭阳市",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "116.3785122",
+        "latitude": "23.55574049",
+        "event": "小伟：小伟又因盗窃被逮捕，羁押在广东省揭阳市看守所"
+    },
+    {
+        "eventdate": "2021年1月1日",
+        "location": "广东高明",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "112.8994724",
+        "latitude": "22.9063496",
+        "event": "代氏夫妇：在高明监狱视频会见室里与小伟得以相见"
+    },
+    {
+        "eventdate": "2021年8月1日",
+        "location": "广东高明",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "112.8994724",
+        "latitude": "22.9063496",
+        "event": "小伟：小伟到高明监狱服刑改造"
+    },
+    {
+        "eventdate": "2022年1月1日",
+        "location": "贵州",
+        "example_id": "4",
+        "child_name": "小伟",
+        "longitude": "106.713478",
+        "latitude": "26.578343",
+        "event": "小伟：与亲生父母相认；代氏夫妇：与儿子小伟相聚"
+    },
+    {
+        "eventdate": "2008年3月25日",
+        "location": "深圳",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "114.0645518",
+        "latitude": "22.54845664",
+        "event": "彭文乐：3岁多的彭文乐在深圳家门口被人抱走；彭高峰：彭文乐走丢，家人报警"
+    },
+    {
+        "eventdate": "2008年5月1日",
+        "location": "广西藤县",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "110.931826",
+        "latitude": "23.373963",
+        "event": "彭高峰：跟记者扮作买家，到广西藤县一个山村，解救了2名被买来的孩子"
+    },
+    {
+        "eventdate": "2009年1月1日",
+        "location": "汕头市潮阳区",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "116.6085145",
+        "latitude": "23.27085496",
+        "event": "彭高峰：跟民警到买卖儿童的重灾区汕头市潮阳区寻找，到当地派出所调集男童户籍资料，一个个排查。"
+    },
+    {
+        "eventdate": "2011年1月1日",
+        "location": "深圳",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "114.0645518",
+        "latitude": "22.54845664",
+        "event": "彭高峰：接到一个大学生打来的电话，看到路边一个小孩很像乐乐"
+    },
+    {
+        "eventdate": "2011年1月2日",
+        "location": "江苏邳州",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "118.0191233",
+        "latitude": "34.34464552",
+        "event": "彭文乐：根据一位大学生提供的线索，在江苏邳州被找到"
+    },
+    {
+        "eventdate": "2011年2月1日",
+        "location": "邳州",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "118.0191233",
+        "latitude": "34.34464552",
+        "event": "彭高峰：和深圳公安一起去了邳州。民警直接去买家那，把乐乐带到了公安局"
+    },
+    {
+        "eventdate": "2022年8月1日",
+        "location": "湖北武汉",
+        "example_id": "5",
+        "child_name": "彭文乐",
+        "longitude": "114.3115816",
+        "latitude": "30.59846674",
+        "event": "彭文乐：考取武汉大学"
+    },
+    {
+        "eventdate": "2007年10月9日",
+        "location": "深圳",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "114.0645518",
+        "latitude": "22.54845664",
+        "event": "孙卓：4岁的孙卓在深圳家门口被人用玩具车拐走；孙海洋：一个穿白色上衣的男子买东西给孙卓吃，拿玩具车给孙卓玩，随后带孙卓离开"
+    },
+    {
+        "eventdate": "2007年11月1日",
+        "location": "山东聊城",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "115.9915878",
+        "latitude": "36.46275819",
+        "event": "孙卓：被拐到山东聊城，被收养"
+    },
+    {
+        "eventdate": "2008年1月1日",
+        "location": "东北",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "126.642464",
+        "latitude": "45.756967",
+        "event": "孙海洋：寻找走丢的儿子"
+    },
+    {
+        "eventdate": "2009年1月1日",
+        "location": "山东",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "117.0274416",
+        "latitude": "36.67485665",
+        "event": "孙海洋：寻找走丢的儿子"
+    },
+    {
+        "eventdate": "2010年1月1日",
+        "location": "河南",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "113.7593841",
+        "latitude": "34.77171292",
+        "event": "孙海洋：寻找走丢的儿子"
+    },
+    {
+        "eventdate": "2011年1月1日",
+        "location": "福建",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "119.3024475",
+        "latitude": "26.10633942",
+        "event": "孙海洋：寻找走丢的儿子"
+    },
+    {
+        "eventdate": "2012年1月1日",
+        "location": "深圳",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "114.0645518",
+        "latitude": "22.54845664",
+        "event": "孙海洋：拍摄电影“打拐题材”《亲爱的》"
+    },
+    {
+        "eventdate": "2017年1月1日",
+        "location": "福建安溪",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "118.1924254",
+        "latitude": "25.06175955",
+        "event": "孙海洋：寻找走丢的儿子"
+    },
+    {
+        "eventdate": "2019年1月1日",
+        "location": "河北沧州",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "116.8455808",
+        "latitude": "38.31021514",
+        "event": "孙海洋：寻找走丢的儿子"
+    },
+    {
+        "eventdate": "2021年11月25日",
+        "location": "山东",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "117.0274416",
+        "latitude": "36.67485665",
+        "event": "孙海洋：DNA比对成功"
+    },
+    {
+        "eventdate": "2021年12月6日",
+        "location": "湖北监利",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "112.904344",
+        "latitude": "29.820079",
+        "event": "孙卓：在老家湖北监利与父母相认；孙海洋：在湖北监利与走丢的儿子相认"
+    },
+    {
+        "eventdate": "2022年1月1日",
+        "location": "深圳",
+        "example_id": "6",
+        "child_name": "孙卓",
+        "longitude": "114.0645518",
+        "latitude": "22.54845664",
+        "event": "孙卓：与父母回到深圳"
+    }
+]
