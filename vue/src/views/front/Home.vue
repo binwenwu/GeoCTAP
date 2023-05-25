@@ -1,6 +1,7 @@
 <template>
   <div>
-    <el-button class="mt-10" type="primary" icon="el-icon-refresh" plain @click="flash">刷新</el-button>
+    <el-button class="mt-10" style="margin-left: 30px" type="primary" icon="el-icon-refresh" plain @click="flash">刷新</el-button>
+
     <el-card style="margin-top: 15px">
       <div>
         <el-row :gutter="20">

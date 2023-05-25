@@ -6,7 +6,7 @@
       <el-button type="warning" @click="reset">重置</el-button>
     </div>
     <div style="margin: 10px 0">
-      <el-button type="primary" @click="handleAdd" v-if="user.role === 'ROLE_ADMIN'|| user.role === 'ROLE_CHARGE'">新增 <i class="el-icon-circle-plus-outline"></i></el-button>
+      <el-button type="primary" @click="handleAdd" v-if="user.role === 'ROLE_ADMIN'|| user.role === 'ROLE_CHARGE'||user.role === 'ROLE_NORMAL'">新增 <i class="el-icon-circle-plus-outline"></i></el-button>
       <el-popconfirm
           class="ml-5"
           confirm-button-text='确定'
