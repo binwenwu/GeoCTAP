@@ -66,6 +66,8 @@ public class Children implements Serializable {
 
     private String nowDist;
 
+    private String nowPlace;
+
     private Double nowLng;
 
     private Double nowLat;

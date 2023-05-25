@@ -112,20 +112,44 @@ public class ChildrenController {
     }
 
 
+    /**
+     *
+     * @param disPlace
+     * @return
+     */
     @AuthAccess
-    @GetMapping("/front/queryByPosition")
+    @GetMapping("/front/queryByPosition1")
 //    @Cacheable(value = "files" ,key = "'frontAll'")
-    public Result queryByPosition(@RequestParam String place){
+    public Result queryByPosition1(@RequestParam String disPlace){
         List<Children> children;
         QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
 
         // 查询数据库中place字段包含placeName的数据
-        queryWrapper.like("place", place);
+        queryWrapper.like("dis_place", disPlace);
 
         children = childrenMapper.selectList(queryWrapper);  // 3. 从数据库取出数据
         return Result.success(children);
     }
 
+
+    /**
+     *
+     * @param nowPlace
+     * @return
+     */
+    @AuthAccess
+    @GetMapping("/front/queryByPosition2")
+//    @Cacheable(value = "files" ,key = "'frontAll'")
+    public Result queryByPosition2(@RequestParam String nowPlace){
+        List<Children> children;
+        QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
+
+        // 查询数据库中place字段包含placeName的数据
+        queryWrapper.like("now_place", nowPlace);
+
+        children = childrenMapper.selectList(queryWrapper);  // 3. 从数据库取出数据
+        return Result.success(children);
+    }
 
 }
 
