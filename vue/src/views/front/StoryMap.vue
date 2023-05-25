@@ -52,86 +52,42 @@ export default {
     var myChart = echarts.init(chartDom);
     var option;
 
-
-    // 请求成功，获取到JSON数据
-    var data = jsonData;
-    data = data
-        .filter(function (dataItem) {
-          return dataItem[2] > 0;
-        })
-        .map(function (dataItem) {
-          return [dataItem[0], dataItem[1], Math.sqrt(dataItem[2])];
-        });
-    myChart.setOption({
-      visualMap: {
-        show: false,
-        min: 0,
-        max: 60,
-        inRange: {
-          symbolSize: [1.0, 10.0]
-        }
-      },
+    option = {
+      backgroundColor: '#000',
       globe: {
-        environment: starfield,
-        heightTexture: bathymetry_bw_composite_4k,
-        displacementScale: 0.05,
-        displacementQuality: 'high',
-        globeOuterRadius: 100,
-        baseColor: '#000',
+        baseTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
+        heightTexture: ROOT_PATH + '/data-gl/asset/bathymetry_bw_composite_4k.jpg',
+        displacementScale: 0.2,
         shading: 'realistic',
+        environment: ROOT_PATH + '/data-gl/asset/starfield.jpg',
         realisticMaterial: {
-          roughness: 0.2,
-          metalness: 0
+          roughness: ROOT_PATH + '/asset/get/s/data-1497599804873-H1SHkG-mZ.jpg',
+          metalness: ROOT_PATH + '/asset/get/s/data-1497599800643-BJbHyGWQW.jpg',
+          textureTiling: [8, 4]
         },
         postEffect: {
-          enable: true,
-          depthOfField: {
-            focalRange: 15,
-            enable: true,
-            focalDistance: 100
-          }
-        },
-        temporalSuperSampling: {
           enable: true
         },
+        viewControl: {
+          autoRotate: false
+        },
         light: {
-          ambient: {
-            intensity: 0
-          },
           main: {
-            intensity: 0.1,
-            shadow: false
+            intensity: 2,
+            shadow: true
           },
           ambientCubemap: {
-            texture: '../../assets/echarts3D/lake.hdr',
-            exposure: 1,
-            diffuseIntensity: 0.5,
+            texture: ROOT_PATH + '/data-gl/asset/pisa.hdr',
+            exposure: 2,
+            diffuseIntensity: 2,
             specularIntensity: 2
           }
-        },
-        viewControl: {
-          autoRotate: false,
-          beta: 180,
-          alpha: 20,
-          distance: 100
         }
-      },
-      series: {
-        type: 'scatter3D',
-        coordinateSystem: 'globe',
-        blendMode: 'lighter',
-        symbolSize: 2,
-        itemStyle: {
-          color: 'rgb(50, 50, 150)',
-          opacity: 1
-        },
-        data: data
       }
-    });
-
-
+    };
 
     option && myChart.setOption(option);
+
   }
 }
 </script>

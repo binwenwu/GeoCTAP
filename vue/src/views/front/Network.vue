@@ -96,6 +96,7 @@ export default {
       option2: {}, // 云层效果
       option3: {}, // 岩石效果
       option4: {}, // 人口密度
+      option5: {}, // 金属质感
       options: [{
         value: '1',
         label: '基本版'
@@ -108,6 +109,9 @@ export default {
       }, {
         value: '4',
         label: '人口密度'
+      },{
+        value: '5',
+        label: '金属质感'
       }],
       value: '',
       children: [], // 儿童信息
@@ -259,7 +263,10 @@ export default {
             enable: true// 后期特效
           },
           viewControl: {
-            autoRotate: false,// 自动旋转
+            autoRotate: false,
+            beta: 180,
+            alpha: 20,
+            distance: 100,
             targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
           },
           light: {
@@ -320,6 +327,9 @@ export default {
           },
           viewControl: {
             autoRotate: false,
+            beta: 180,
+            alpha: 20,
+            distance: 100,
             targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
           },
 
@@ -399,7 +409,10 @@ export default {
             }
           },
           viewControl: {
-            autoRotate: false,// 自动旋转
+            autoRotate: false,
+            beta: 180,
+            alpha: 20,
+            distance: 100,
             targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
           },
           debug: {
@@ -488,6 +501,9 @@ export default {
           },
           viewControl: {
             autoRotate: false,
+            beta: 180,
+            alpha: 20,
+            distance: 100,
             targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
           }
         },
@@ -526,6 +542,66 @@ export default {
           }
         ]
       };
+      this.option5 = {
+        backgroundColor: '#000',
+        globe: {
+          baseTexture: ROOT_PATH + '/data-gl/asset/world.topo.bathy.200401.jpg',
+          heightTexture: ROOT_PATH + '/data-gl/asset/bathymetry_bw_composite_4k.jpg',
+          displacementScale: 0.2,
+          shading: 'realistic',
+          environment: ROOT_PATH + '/data-gl/asset/starfield.jpg',
+          realisticMaterial: {
+            roughness: ROOT_PATH + '/asset/get/s/data-1497599804873-H1SHkG-mZ.jpg',
+            metalness: ROOT_PATH + '/asset/get/s/data-1497599800643-BJbHyGWQW.jpg',
+            textureTiling: [8, 4]
+          },
+          postEffect: {
+            enable: true
+          },
+          viewControl: {
+            autoRotate: false,
+            beta: 180,
+            alpha: 20,
+            distance: 100,
+            targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
+          },
+          light: {
+            main: {
+              intensity: 2,
+              shadow: true
+            },
+            ambientCubemap: {
+              texture: ROOT_PATH + '/data-gl/asset/pisa.hdr',
+              exposure: 2,
+              diffuseIntensity: 2,
+              specularIntensity: 2
+            }
+          }
+        },
+        series: [
+          {
+            name: "lines3D",
+            type: "lines3D",
+            coordinateSystem: "globe",
+            effect: {
+              show: true,
+              period: 2, // 箭头指向速度，值越小速度越快
+              trailWidth: 2,
+              trailLength: 0.5,
+              trailOpacity: 1,
+              trailColor: '#0087f4'
+            },
+            blendMode: "lighter",
+            lineStyle: {
+              width: 1,
+              color: '#0087f4',
+              opacity: 0.4
+            },
+            data: [],
+            silent: false,
+          },
+        ]
+      };
     },
 
     initChart(optionSelect) {
@@ -553,6 +629,9 @@ export default {
         case "4":
           option = this.option4;
           break;
+        case "5":
+          option = this.option5;
+          break;
         default:
           option = this.option1;
           break;
@@ -562,7 +641,7 @@ export default {
       if (option && typeof option === 'object'&& optionSelect=='1') {
         option.series[0].data = []
         option.series[0].data = option.series[0].data.concat(this.tracks);
-        //myChart.clear();
+
         myChart.setOption(option);
       }else{
         option.series[0].data = []
