@@ -66,11 +66,20 @@ public class EchartsController {
             Date createTime = user.getCreateTime();
             Quarter quarter = DateUtil.quarterEnum(createTime);
             switch (quarter) {
-                case Q1: q1 += 1; break;
-                case Q2: q2 += 1; break;
-                case Q3: q3 += 1; break;
-                case Q4: q4 += 1; break;
-                default: break;
+                case Q1:
+                    q1 += 1;
+                    break;
+                case Q2:
+                    q2 += 1;
+                    break;
+                case Q3:
+                    q3 += 1;
+                    break;
+                case Q4:
+                    q4 += 1;
+                    break;
+                default:
+                    break;
             }
         }
         return Result.success(CollUtil.newArrayList(q1, q2, q3, q4));
@@ -97,17 +106,30 @@ public class EchartsController {
     }
 
 
+//    @AuthAccess
+//    @GetMapping("/file/front/random")
+////    @Cacheable(value = "files" ,key = "'frontAll'")
+//    public Result frontRandom( @RequestParam Integer id) {
+//        List<Children> children;
+//        QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
+//        //queryWrapper.like("volunteer", volunteer);
+//        queryWrapper.between("id", id,id+23);
+//        children = childrenMapper.selectList(queryWrapper);  // 3. 从数据库取出数据
+//        return Result.success(children);
+//    }
+//
+//
+//    @AuthAccess
+//    @GetMapping("/file/front/random2")
+////    @Cacheable(value = "files" ,key = "'frontAll'")
+//    public Result frontRandom2( @RequestParam Integer id) {
+//        List<Children> children;
+//        QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
+//        //queryWrapper.like("volunteer", volunteer);
+//        queryWrapper.between("id", id,id+500);
+//        children = childrenMapper.selectList(queryWrapper);  // 3. 从数据库取出数据
+//        return Result.success(children);
+//    }
 
-    @AuthAccess
-    @GetMapping("/file/front/random")
-//    @Cacheable(value = "files" ,key = "'frontAll'")
-    public Result frontAll2( @RequestParam Integer id) {
-        List<Children> children;
-        QueryWrapper<Children> queryWrapper = new QueryWrapper<>();
-        //queryWrapper.like("volunteer", volunteer);
-        queryWrapper.between("id", id,id+23);
-        children = childrenMapper.selectList(queryWrapper);  // 3. 从数据库取出数据
-        return Result.success(children);
-    }
 
 }

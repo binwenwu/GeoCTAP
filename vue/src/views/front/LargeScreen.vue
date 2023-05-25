@@ -4,9 +4,9 @@
     <el-header height="12vh" ref="header">
       <UserHeader></UserHeader>
     </el-header>
-    <a ref="fScreen" class="navi-a" :style="{'top':fSPosition}">
-      <i ref="icon" :class="iconStyle" @click="fullScreen"></i>
-    </a>
+<!--    <a ref="fScreen" class="navi-a" :style="{'top':fSPosition}" style="z-index: 999;">-->
+<!--      <i ref="icon" :class="iconStyle" @click="fullScreen"></i>-->
+<!--    </a>-->
     <el-main>
       <router-view style="color:white;"/>
     </el-main>

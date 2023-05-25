@@ -1,6 +1,6 @@
 <template>
   <div>
-    <el-button class="mt-10" type="primary" icon="el-icon-loading" plain @click="flash">刷新</el-button>
+    <el-button class="mt-10" type="primary" icon="el-icon-refresh" plain @click="flash">刷新</el-button>
     <el-card style="margin-top: 15px">
       <div>
         <el-row :gutter="20">
@@ -11,7 +11,8 @@
                     placement="top-start"
                     width="200"
                     trigger="hover"
-                    :content="getBaseInfo(item)">
+                    :content="getBaseInfo(item)"
+                >
                   <img slot="reference" :src="getImagePath(item.photo)" alt="" style="width: 100%;height:235px">
                 </el-popover>
               </div>
@@ -70,6 +71,12 @@ export default {
     }
   },
   created() {
+    // this.request.get("/echarts/file/front/all").then(res => {
+    //   console.log(res.data)
+    //   this.files = res.data.filter(v => v.type === 'png' || v.type === 'jpg' || v.type === 'webp')
+    // })
+
+
     this.randomID();
     this.load()
   },
@@ -85,7 +92,7 @@ export default {
       return item.childName + " " + item.sex
     },
     load() {
-      this.request.get("/echarts/file/front/random", {
+      this.request.get("children/front/randomSelect1", {
         params: {
           id: this.id
         }
@@ -116,6 +123,13 @@ export default {
       const overlay = img.nextElementSibling;
       img.style.transform = ""; // 恢复原始大小
       overlay.style.opacity = "0"; // 隐藏悬浮框
+    },
+    handleClose(done) {
+      this.$confirm('确认关闭？')
+          .then(_ => {
+            done();
+          })
+          .catch(_ => {});
     },
     show(item){
       this.item = item;

@@ -9,7 +9,7 @@ import lombok.Setter;
 
 /**
  * <p>
- * 
+ *
  * </p>
  *
  * @author 吴斌文
@@ -22,7 +22,7 @@ public class Children implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-      private Integer id;
+    private Integer id;
 
     private String childName;
 
