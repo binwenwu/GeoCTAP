@@ -24,7 +24,7 @@ const routes = [
     path: '/largescreen',
     name: 'LargeScreen',
     component: () => import('../views/front/LargeScreen.vue'),
-    redirect: '/largescreen/watch',
+    redirect: '/largescreen/network',
     children: [
       {
         path: 'watch',
