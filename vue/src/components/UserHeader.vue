@@ -1,7 +1,7 @@
 <template>
   <div class="LsHeader">
     <div class="LsHeaderTitle">
-      儿童拐卖分析宣传一体化平台(GeoCTAP)
+      宝贝回家——GeoCTAP
     </div>
     <el-row type="flex" justify="space-between">
       <el-col :span="2"><el-tooltip effect="light" content="点击返回初始页" placement="top-start">

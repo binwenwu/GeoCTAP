@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="loginHeader">
-      儿童拐卖分析宣传一体化平台（GeoCTAP）
+      宝贝回家——GeoCTAP
     </div>
     <div class="loginBody">
       <div style="margin: 2vh 0; text-align: center; font-size: calc(100vw * 25 / 1920);"><b>注 册</b></div>
