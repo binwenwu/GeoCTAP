@@ -121,19 +121,7 @@ export default {
     }
   },
   created(){
-    setTimeout(() => {
-      window.L2Dwidget.init({
-        pluginRootPath: '../live2dw/',
-        pluginJsPath: 'lib/',
-        pluginModelPath: 'live2d-widget-model-hijiki/assets/', //中间这个haru_2就是你的老婆,想换个老婆,换这个就可以了
-        tagMode: false,
-        debug: false,
-        model: {jsonPath: '../live2dw/live2d-widget-model-hijiki/assets/hijiki.model.json'},
-        display: {position: 'right', width: 200, height: 220},  //调整老婆大小,和位置
-        mobile: {show: true},   //要不要老婆盯着你的鼠标看
-        log: false,
-      })
-    }, 500)
+
   },
   mounted() {
     this.randomTracks()
@@ -297,16 +285,15 @@ export default {
             effect: {
               show: true,
               period: 2, // 箭头指向速度，值越小速度越快
-              trailWidth: 2,
+              trailWidth: 8,
               trailLength: 0.5,
               trailOpacity: 1,
-              trailColor: '#0087f4'
+              trailColor: '#FF8C00',
             },
             blendMode: "lighter",
             lineStyle: {
-              width: 1,
-              color: '#0087f4',
-              opacity: 0.4
+              width: 4,
+              color: 'red',
             },
             data: [],
             silent: false,
@@ -363,16 +350,15 @@ export default {
             effect: {
               show: true,
               period: 2, // 箭头指向速度，值越小速度越快
-              trailWidth: 2,
+              trailWidth: 8,
               trailLength: 0.5,
               trailOpacity: 1,
-              trailColor: '#0087f4'
+              trailColor: '#FF8C00'
             },
             blendMode: "lighter",
             lineStyle: {
-              width: 1,
-              color: '#0087f4',
-              opacity: 0.4
+              width: 4,
+              color: 'red',
             },
             data: [],
             silent: false,
@@ -437,16 +423,15 @@ export default {
             effect: {
               show: true,
               period: 2, // 箭头指向速度，值越小速度越快
-              trailWidth: 2,
+              trailWidth: 8,
               trailLength: 0.5,
               trailOpacity: 1,
-              trailColor: '#0087f4'
+              trailColor: '#FF8C00'
             },
             blendMode: "lighter",
             lineStyle: {
-              width: 1,
-              color: '#0087f4',
-              opacity: 0.4
+              width: 4,
+              color: 'red',
             },
             data: [],
             silent: false,
@@ -523,16 +508,15 @@ export default {
             effect: {
               show: true,
               period: 2, // 箭头指向速度，值越小速度越快
-              trailWidth: 2,
+              trailWidth: 8,
               trailLength: 0.5,
               trailOpacity: 1,
-              trailColor: '#0087f4'
+              trailColor: '#FF8C00',
             },
             blendMode: "lighter",
             lineStyle: {
-              width: 1,
-              color: '#0087f4',
-              opacity: 0.4
+              width: 4,
+              color: 'red',
             },
             data: [],
             silent: false,
@@ -594,16 +578,15 @@ export default {
             effect: {
               show: true,
               period: 2, // 箭头指向速度，值越小速度越快
-              trailWidth: 2,
+              trailWidth: 4,
               trailLength: 0.5,
               trailOpacity: 1,
-              trailColor: '#0087f4'
+              trailColor: '#FF8C00',
             },
             blendMode: "lighter",
             lineStyle: {
-              width: 1,
-              color: '#0087f4',
-              opacity: 0.4
+              width: 4,
+              color: 'red',
             },
             data: [],
             silent: false,
@@ -896,9 +879,9 @@ export default {
 }
 #earth {
   border: 1px solid white;
-  box-shadow:-6px 0px 6px rgba(35,135,193,0.6),   /*左边阴影*/
-  0px -6px 6px rgba(35,135,193,0.6),  /*上边阴影*/
-  6px 0px 6px rgba(35,135,193,0.6),  /*右边阴影*/
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.6),   /*左边阴影*/ 
+  0px -6px 6px rgba(35,135,193,0.6),  /*上边阴影*/ 
+  6px 0px 6px rgba(35,135,193,0.6),  /*右边阴影*/ 
   0px 6px 6px rgba(35,135,193,0.6); /*下边阴影*/
 }
 </style>

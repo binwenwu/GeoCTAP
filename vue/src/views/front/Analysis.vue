@@ -164,12 +164,21 @@ export default {
       })
 
     });
+    
     this.map.addLayer(new Tile({
-      title: "路网",
+      title: "底图",
       source: new XYZ({
-        url: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}"
+        url: "http://t3.tianditu.com/DataServer?T=img_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
       })
     }))
+    var tian_di_tu_mark = new Tile({
+      title: "路网",
+      source: new XYZ({
+        url: "http://t3.tianditu.com/DataServer?T=cia_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
+      })
+    });
+    tian_di_tu_mark.setZIndex(99)
+    this.map.addLayer(tian_di_tu_mark)
     this.grid_getic = new Tile({
       source: new TileWMS({
         url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {

@@ -222,7 +222,7 @@ export default {
               position: 'right',
               formatter: '{b}',
               textStyle: {
-                color: 'white',
+                color: 'red',
                 fontSize: 16,
                 fontWeight: 'bold'
               }
@@ -237,13 +237,13 @@ export default {
             effect: {
               show: true,
               period: 2,
-              trailColor: 'red',
-              trailWidth: 8
+              trailColor: '#FF8C00',
+              trailWidth: 16
             },
             blendMode: "lighter",
             lineStyle: {
-              width: 4,
-              color: '#0096FF',
+              width: 8,
+              color: 'red',
             },
             data: [],
             silent: false,
@@ -266,16 +266,18 @@ export default {
             label: {
               normal: {
                 show: true,
-                position: 'top',
+                position: 'bottom',
                 color: 'white',
+                fontWeight: 'bold',
               },
             },
             edgeLabel: {
               normal: {
                 show: true,
                 textStyle: {
-                    fontSize: 12,
-                    color: '#FFF',
+                  fontSize: 12,
+                  color: '#FFF',
+                  fontWeight: 'bold',
                 },
                 formatter: '{c}',
               },
@@ -294,7 +296,7 @@ export default {
             lineStyle: {
                 normal: {
                   opacity: 0.9,
-                  width: 2,
+                  width: 4,
                   curveness: 0.15,
                   color: {
                       type: 'linear',
@@ -355,9 +357,9 @@ export default {
               top: '5%',
               left: 'center',
               textStyle: {
-                color: 'white',
+                color: '#FF4500',
                 fontWeight: 'bold',
-                fontSize: '24'
+                fontSize: '36'
               }
             },
             graphic: {
@@ -365,7 +367,7 @@ export default {
                 text: '',
                 fontSize: 16,
                 fontWeight: 'bold',
-                fill: 'white'
+                fill: 'red'
               }
             },
             series: [
@@ -445,9 +447,9 @@ export default {
 }
 #earth {
   border: 1px solid white;
-  box-shadow:-6px 0px 6px rgba(35,135,193,0.6),   /*左边阴影*/ 
-  0px -6px 6px rgba(35,135,193,0.6),  /*上边阴影*/ 
-  6px 0px 6px rgba(35,135,193,0.6),  /*右边阴影*/ 
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.6),   /*左边阴影*/
+  0px -6px 6px rgba(35,135,193,0.6),  /*上边阴影*/
+  6px 0px 6px rgba(35,135,193,0.6),  /*右边阴影*/
   0px 6px 6px rgba(35,135,193,0.6); /*下边阴影*/
 }
 </style>

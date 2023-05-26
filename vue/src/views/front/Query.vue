@@ -229,7 +229,7 @@ export default {
         this.child_img=pro.photo
         this.child_info_list = [
           `姓名：${pro.child_name}`,
-          `性别${pro.sex}`,
+          `性别：${pro.sex}`,
           `走丢地点：${pro.dis_place}`,
           `走丢时间：${pro.dis_time.split('T')[0]}`,
           `走丢类型：${pro.dis_type}`,
@@ -256,9 +256,15 @@ export default {
 
     //路网
     var tian_di_tu_road_layer = new Tile({
+      title: "底图",
+      source: new XYZ({
+        url: "http://t3.tianditu.com/DataServer?T=img_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
+      })
+    });
+    var tian_di_tu_mark = new Tile({
       title: "路网",
       source: new XYZ({
-        url: "http://map.geoq.cn/ArcGIS/rest/services/ChinaOnlineStreetPurplishBlue/MapServer/tile/{z}/{y}/{x}"
+        url: "http://t3.tianditu.com/DataServer?T=cia_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
       })
     });
     var overlay = new Overlay({
@@ -304,6 +310,7 @@ export default {
       source: wms_source
     })
     this.map.addLayer(tian_di_tu_road_layer)
+    this.map.addLayer(tian_di_tu_mark)
     this.map.addLayer(wmslayer);
     this.map.on('singleclick', (evt) => {
       const coordinate = evt.coordinate;
@@ -416,7 +423,7 @@ span {
 }
 .box-card {
   color: white;
-  background-color: transparent;
+  background-color: rgba(0,150,255,0.2);
 }
 .ol-popup:after,
 .ol-popup:before {

@@ -43,11 +43,11 @@ export default {
       window.L2Dwidget.init({
         pluginRootPath: '../live2dw/',
         pluginJsPath: 'lib/',
-        pluginModelPath: 'live2d-widget-model-hijiki/assets/', //中间这个haru_2就是你的老婆,想换个老婆,换这个就可以了
+        pluginModelPath: 'live2d-widget-model-haru_1/assets/', //中间这个haru_2就是你的老婆,想换个老婆,换这个就可以了
         tagMode: false,
         debug: false,
-        model: {jsonPath: '../live2dw/live2d-widget-model-hijiki/assets/hijiki.model.json'},
-        display: {position: 'right', width: 200, height: 220},  //调整老婆大小,和位置
+        model: {jsonPath: '../live2dw/live2d-widget-model-haru_1/assets/haru01.model.json'},
+        display: {position: 'right', width: 200, height: 450},  //调整老婆大小,和位置
         mobile: {show: true},   //要不要老婆盯着你的鼠标看
         log: false,
       })

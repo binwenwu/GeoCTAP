@@ -10,7 +10,7 @@
         </div>
         <div style="flex: 1">
           <el-menu :default-active="'1'" class="el-menu-demo" mode="horizontal" router>
-            <el-menu-item index="/largescreen/watch" ><i class="el-icon-view"></i><b>可视化大屏</b></el-menu-item>
+            <el-menu-item index="/largescreen/network" ><i class="el-icon-view"></i><b>可视化大屏</b></el-menu-item>
 
             <el-menu-item index="/front/home"><i class="el-icon-house"></i><b>首页</b></el-menu-item>
             <el-menu-item index="/front/article"><i class="el-icon-reading"></i><b>文章列表</b></el-menu-item>
