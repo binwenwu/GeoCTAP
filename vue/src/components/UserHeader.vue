@@ -17,7 +17,8 @@
         <i class="el-icon-map-location"></i>故事地图</router-link></el-col>
       <el-col :span="2" :push="4"><router-link class="navi-a" active-class="active" :to="{name:'TopicMap'}">
         <i class="el-icon-copy-document"></i>专题地图</router-link></el-col>
-      <el-col :span="2" :push="3"><router-link class="navi-a" :to="{name:'Analysis'}"><i class="el-icon-s-operation"></i>时空分析</router-link></el-col>
+      <el-col :span="2" :push="3"><router-link class="navi-a" active-class="active" :to="{name:'Analysis'}">
+        <i class="el-icon-s-operation"></i>时空分析</router-link></el-col>
       <!-- <el-col :span="2"><el-button type="primary" icon="el-icon-full-screen" style="position: relative;top:5.5vh"></el-button></el-col> -->
       <el-col :span="2"></el-col>
     </el-row>

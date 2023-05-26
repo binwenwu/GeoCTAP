@@ -20,7 +20,7 @@
         <el-button type="primary" @click="visualStory">确 定</el-button>
       </span>
     </el-dialog>
-    <div id="earth" style="width: 100%;height: 78vh;opacity: 1;"></div>
+    <div id="earth" style="width: 100%;height: 78.5vh;opacity: 1;"></div>
   </el-card>
 </template>
 <script>
@@ -190,7 +190,6 @@ export default {
             beta: 180,
             alpha: 20,
             distance: 100,
-            targetCoord: [104.0, 37.5] // 设置相机视角位于中国的经纬度坐标
           },
           layers: [
             {
@@ -443,5 +442,12 @@ export default {
   top: 18vh;
   left: 3vw;
   z-index: 999;
+}
+#earth {
+  border: 1px solid white;
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.6),   /*左边阴影*/ 
+  0px -6px 6px rgba(35,135,193,0.6),  /*上边阴影*/ 
+  6px 0px 6px rgba(35,135,193,0.6),  /*右边阴影*/ 
+  0px 6px 6px rgba(35,135,193,0.6); /*下边阴影*/
 }
 </style>

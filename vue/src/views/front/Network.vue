@@ -19,34 +19,30 @@
       </el-option>
     </el-select>
 
-    <el-button type="primary" plain @click="randomTracks">刷新轨迹</el-button>
+    <el-button class="refresh" @click="randomTracks">刷新轨迹</el-button>
 
 
     <el-input
         style="width: 10%"
         placeholder="拐出地"
         v-model="disPlace"
-        clearable>
+        clearable
+        class="address1">
     </el-input>
-    <el-button type="primary" plain @click="queryByPosition1(disPlace)">搜索</el-button>
+    <el-button class="address11" @click="queryByPosition1(disPlace)">搜索</el-button>
 
     <el-input
         style="width: 10%"
         placeholder="拐入地"
         v-model="nowPlace"
-        clearable>
+        clearable
+        class="address2">
     </el-input>
-    <el-button type="primary" plain @click="queryByPosition2(nowPlace)">搜索</el-button>
+    <el-button class="address21" @click="queryByPosition2(nowPlace)">搜索</el-button>
 
-    <div id="gender" ref="gender"
-         style="width: 500px;height: 400px;opacity: 1;position: absolute; margin-top: 300px;z-index: 999"></div>
+    <div id="gender" ref="gender" class="statistics"></div>
 
-
-
-
-
-
-    <div id="earth" style="width: 100%;height: 80vh;opacity: 1;"></div>
+    <div id="earth" style="width: 100%;height: 78.5vh;opacity: 1;"></div>
   </el-card>
 </template>
 
@@ -125,7 +121,19 @@ export default {
     }
   },
   created(){
-
+    setTimeout(() => {
+      window.L2Dwidget.init({
+        pluginRootPath: '../live2dw/',
+        pluginJsPath: 'lib/',
+        pluginModelPath: 'live2d-widget-model-hijiki/assets/', //中间这个haru_2就是你的老婆,想换个老婆,换这个就可以了
+        tagMode: false,
+        debug: false,
+        model: {jsonPath: '../live2dw/live2d-widget-model-hijiki/assets/hijiki.model.json'},
+        display: {position: 'right', width: 200, height: 220},  //调整老婆大小,和位置
+        mobile: {show: true},   //要不要老婆盯着你的鼠标看
+        log: false,
+      })
+    }, 500)
   },
   mounted() {
     this.randomTracks()
@@ -731,13 +739,12 @@ export default {
       }
 
       var option = {
-        backgroundColor: "#010c20",
         legend: {
           type: "scroll",
           orient: 'vertical',
           height: '80%',
-          left: '70%',
-          top: 'center',
+          left: '55%',
+          top: '75%',
           icon: "roundRect", //设置为圆，删除则为矩形
           itemWidth: 2,
           itemHeight: 16,
@@ -753,13 +760,13 @@ export default {
           textStyle: {
             rich: {
               name: {
-                fontSize: 14,
+                fontSize: 16,
                 fontWeight: 400,
                 //width: 100,
                 height: 16,
                 verticalAlign: "top",
                 padding: [4, 0, 0, 4],
-                color: '#D1E5FF',
+                color: 'white',
                 fontFamily: 'Source Han Sans CN-Regular',
               },
               value0: {
@@ -838,8 +845,60 @@ export default {
   background-color: transparent;
   opacity: 0.8;
 }
-
-
-
-
+.address1 {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 18vh;
+  right: 8vw;
+  z-index: 999;
+}
+.address11 {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 18vh;
+  right: 3vw;
+  z-index: 999;
+}
+.address2 {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 24vh;
+  right: 8vw;
+  z-index: 999;
+}
+.address21 {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 24vh;
+  right: 3vw;
+  z-index: 999;
+}
+.refresh {
+  background-color: transparent;
+  color: white;
+  position: absolute;
+  top: 18vh;
+  left: 15vw;
+  z-index: 999;
+}
+.statistics {
+  width: 30vw;
+  height: 40vh;
+  opacity: 1;
+  position: absolute;
+  top:50vh;
+  background-color: transparent;
+  z-index: 999
+}
+#earth {
+  border: 1px solid white;
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.6),   /*左边阴影*/
+  0px -6px 6px rgba(35,135,193,0.6),  /*上边阴影*/
+  6px 0px 6px rgba(35,135,193,0.6),  /*右边阴影*/
+  0px 6px 6px rgba(35,135,193,0.6); /*下边阴影*/
+}
 </style>

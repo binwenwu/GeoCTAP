@@ -1,33 +1,27 @@
 <template>
-  <div>
-    <el-card class="box-card" shadow="never">
-      专题地图模块
-    </el-card>
-    <div>
-
+  <el-card class="box-card" shadow="never">
+    <div class="series1">
       <el-switch v-model="show_point" @change='point_change' active-text="热点">
       </el-switch>
       <el-switch v-model="show_hotmap" @change='hotmap_change' active-text="热力图">
       </el-switch>
     </div>
-    <div>
-      <el-radio-group v-model="radio_topic" @change="top_change">
+    <div class="series2">
+      <el-radio-group v-model="radio_topic" @change="top_change" fill="rgba(64, 158, 255,0.6)">
         <el-radio-button label="age">走丢平均年龄</el-radio-button>
         <el-radio-button label="disage">平均年龄</el-radio-button>
         <el-radio-button label="count">走丢数量</el-radio-button>
       </el-radio-group>
     </div>
-    <div>
-      <el-radio-group v-model="radio_scale" @change="scale_change">
+    <div class="series3">
+      <el-radio-group v-model="radio_scale" @change="scale_change" fill="rgba(64, 158, 255,0.6)">
         <el-radio-button label="provi">省</el-radio-button>
         <el-radio-button label="city">市</el-radio-button>
         <el-radio-button label="dist">县/区</el-radio-button>
       </el-radio-group>
     </div>
-
-
     <div id="topic_map"></div>
-  </div>
+  </el-card>
 </template>
 <script>
 
@@ -35,6 +29,8 @@ import { Map, View, Overlay } from 'ol'
 import { XYZ, TileWMS } from 'ol/source'
 import { Tile } from 'ol/layer'
 import { FALSE } from 'ol/functions'
+import { defaults as defaultControls } from 'ol/control'
+
 export default {
 
   name: 'TopicMap',
@@ -147,6 +143,12 @@ export default {
         projection: 'EPSG:4326'
       }),
       target: 'topic_map',
+      //加载控件到地图容器中
+      controls: defaultControls({
+          zoom: false,
+          rotate: false,
+          attribution: false
+      })
 
     });
     this.map.addLayer(new Tile({
@@ -245,6 +247,39 @@ export default {
 }
 
 #topic_map {
-  width: 90vw;
-  height: 80vh;
-}</style>
+  width: 100%;
+  height: 78vh;
+  border: 1px solid white;
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/ 
+  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/ 
+  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/ 
+  0px 6px 6px rgba(35,135,193,0.8); /*下边阴影*/
+}
+
+::v-deep .el-switch span{
+  color: white;
+}
+
+::v-deep .el-radio-button__inner{
+  background-color: transparent;
+  color: white;
+}
+.series1 {
+  position: absolute;
+  top: 18vh;
+  left: 3vw;
+  z-index: 999;
+}
+.series2 {
+  position: absolute;
+  top: 24vh;
+  left: 3vw;
+  z-index: 999;
+}
+.series3 {
+  position: absolute;
+  top: 30vh;
+  left: 3vw;
+  z-index: 999;
+}
+</style>
