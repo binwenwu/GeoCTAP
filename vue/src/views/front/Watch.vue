@@ -14,7 +14,7 @@
       </el-row>
     </div>
     <div v-loading.fullscreen.lock="!isLoading"
-    element-loading-text="拼命加载中"  
+    element-loading-text="拼命加载中"
     element-loading-spinner="el-icon-loading"
     element-loading-background="rgba(0, 0, 0, 0.8)">
     </div>
@@ -298,7 +298,7 @@ export default {
         }
         for (let i = 0; i < provinceDatas.length; i++) {
           // 华北
-          
+
           if (provinceDatas[i] == '北京市' || provinceDatas[i] == '天津市' || provinceDatas[i] == '河北省' || provinceDatas[i] == '山西省' || provinceDatas[i] == '内蒙古自治区') {
             if (typeof regionNorth1.value == 'undefined') {
               regionNorth1.value = outProvinceChildren[i]
@@ -339,7 +339,7 @@ export default {
             }
           }
         }
-      
+
         region1.push(regionNorth1)
         region1.push(regionSourth1)
         region1.push(regionEast1)
@@ -913,7 +913,7 @@ export default {
                 //   return params.value * 100 + single[params.dataIndex];
                 // }
               }
-              
+
             },
             data: ageRangeDatas
           },
@@ -1417,7 +1417,7 @@ export default {
         projection: 'EPSG:4326'
       })
       var wms_source = new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', // GeoServer 的 WMS 服务地址
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', // GeoServer 的 WMS 服务地址
         params: {
           'LAYERS': 'GISProj:children', // 指定图层的名称，格式为 "workspace:layer_name"
           // 'VERSION': '1.1.0'
@@ -1452,17 +1452,17 @@ export default {
 }
 #map {
   border: 1px solid white;
-  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/ 
-  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/ 
-  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/ 
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/
+  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/
+  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/
   0px 6px 6px rgba(35,135,193,0.8); /*下边阴影*/
 }
 .wrap {
   margin-top: 2vh;
   border-top: 1px solid rgb(35,135,193);
-  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/ 
-  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/ 
-  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/ 
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/
+  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/
+  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/
   0px 6px 6px rgba(35,135,193,0.8); /*下边阴影*/
 }
 </style>

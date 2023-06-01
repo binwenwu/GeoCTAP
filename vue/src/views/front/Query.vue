@@ -41,7 +41,7 @@
         <tr>
           <td>身高</td>
           <td>
-            <el-slider v-model="height" range :max="200" style="float: left;width: 60%;"></el-slider> 
+            <el-slider v-model="height" range :max="200" style="float: left;width: 60%;"></el-slider>
             <el-checkbox v-model="allow_null_height">允许空值</el-checkbox>
           </td>
         </tr>
@@ -192,12 +192,12 @@ export default {
       // console.log(sum_filter.toString())
 
       var select_wms = new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', // GeoServer 的 WMS 服务地址
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', // GeoServer 的 WMS 服务地址
         params: {
           'LAYERS': 'GISProj:children', // 指定图层的名称，格式为 "workspace:layer_name"
           // 'VERSION': '1.1.0'
           env: 'color:0000FF;name:triangle;size:12',  //重点处：修改点状符号为：蓝色、三角形、大小为12
-          // filter: JSON.stringify(sum_filter) 
+          // filter: JSON.stringify(sum_filter)
           CQL_FILTER: cql,
           // CQL_FILTER: "birthday after 2000-05-24T09:20:12.507Z and birthday before 2023-05-24T09:20:12.507Z and dis_provi = '湖北省'"
         }
@@ -258,13 +258,13 @@ export default {
     var tian_di_tu_road_layer = new Tile({
       title: "底图",
       source: new XYZ({
-        url: "http://t3.tianditu.com/DataServer?T=img_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
+        url: "http://t3.tianditu.com/DataServer?T=img_w&tk=85c9d12d5d691d168ba5cb6ecaa749eb&x={x}&y={y}&l={z}"
       })
     });
     var tian_di_tu_mark = new Tile({
       title: "路网",
       source: new XYZ({
-        url: "http://t3.tianditu.com/DataServer?T=cia_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
+        url: "http://t3.tianditu.com/DataServer?T=cia_w&tk=85c9d12d5d691d168ba5cb6ecaa749eb&x={x}&y={y}&l={z}"
       })
     });
     var overlay = new Overlay({
@@ -299,7 +299,7 @@ export default {
 
     });
     var wms_source = new TileWMS({
-      url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', // GeoServer 的 WMS 服务地址
+      url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', // GeoServer 的 WMS 服务地址
       params: {
         'LAYERS': 'GISProj:children', // 指定图层的名称，格式为 "workspace:layer_name"
         // 'VERSION': '1.1.0'
@@ -317,7 +317,7 @@ export default {
       // const hdms = toStringHDMS(toLonLat(coordinate));
 
       // this.content.innerHTML = '<p>You clicked here:</p><code>' + hdms + '</code>';
-      
+
       console.log('点了')
       var viewResolution = /** @type {number} */ (view.getResolution());
       var url = wms_source.getFeatureInfoUrl(
@@ -354,9 +354,9 @@ export default {
 width:100%;
 height:78vh;
 border: 1px solid white;
-box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/ 
-0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/ 
-6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/ 
+box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/
+0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/
+6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/
 0px 6px 6px rgba(35,135,193,0.8); /*下边阴影*/
 }
 

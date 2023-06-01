@@ -127,7 +127,7 @@ export default {
           this.map.removeLayer(this.hotmap)
           this.show_hotmap = false
         }
-        
+
 
       }
     },
@@ -154,83 +154,83 @@ export default {
     this.map.addLayer(new Tile({
       title: "底图",
       source: new XYZ({
-        url: "http://t3.tianditu.com/DataServer?T=img_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
+        url: "http://t3.tianditu.com/DataServer?T=img_w&tk=85c9d12d5d691d168ba5cb6ecaa749eb&x={x}&y={y}&l={z}"
       })
     }))
     var tian_di_tu_mark = new Tile({
       title: "路网",
       source: new XYZ({
-        url: "http://t3.tianditu.com/DataServer?T=cia_w&tk=50059cc572a67fe5db3098190ef4ca19&x={x}&y={y}&l={z}"
+        url: "http://t3.tianditu.com/DataServer?T=cia_w&tk=85c9d12d5d691d168ba5cb6ecaa749eb&x={x}&y={y}&l={z}"
       })
     });
     tian_di_tu_mark.setZIndex(99)
     this.map.addLayer(tian_di_tu_mark)
     this.age_city = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:age_city',
         }
       })
     })
     this.age_dist = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:age_dist',
         }
       })
     })
     this.age_provi = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:age_provi',
         }
       })
     })
     this.age_dis_city = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:age_dis_city',
         }
       })
     })
     this.age_dis_dist = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:age_dis_dist',
         }
       })
     })
     this.age_dis_provi = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:age_dis_provi',
         }
       })
     })
     this.count_city = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:count_city',
         }
       })
     })
     this.count_dist = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:count_dist',
         }
       })
     })
     this.count_provi = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:count_provi',
         }
       })
     })
     this.dis_point = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:dis_point',
         }
       })
@@ -238,7 +238,7 @@ export default {
     this.dis_point.setZIndex(20)
     this.hotmap = new Tile({
       source: new TileWMS({
-        url: 'http://125.220.153.26:8080/geoserver/GISProj/wms', params: {
+        url: 'http://125.220.153.26:31520/geoserver/GISProj/wms', params: {
           'LAYERS': 'GISProj:hotmap',
         }
       })
@@ -258,9 +258,9 @@ export default {
   width: 100%;
   height: 78vh;
   border: 1px solid white;
-  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/ 
-  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/ 
-  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/ 
+  box-shadow:-6px 0px 6px rgba(35,135,193,0.8),   /*左边阴影*/
+  0px -6px 6px rgba(35,135,193,0.8),  /*上边阴影*/
+  6px 0px 6px rgba(35,135,193,0.8),  /*右边阴影*/
   0px 6px 6px rgba(35,135,193,0.8); /*下边阴影*/
 }
 
