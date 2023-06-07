@@ -261,6 +261,7 @@ export default {
   color: white;
 }
 
+
 .series1 {
   position: absolute;
   top: 18vh;
