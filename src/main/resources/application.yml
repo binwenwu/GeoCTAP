@@ -7,11 +7,11 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
     url: jdbc:mysql://125.220.153.23:31621/geoctap?serverTimezone=GMT%2b8 # 数据库地址
     username: root
-    password: VubCMiHvT1
+    password: password
   redis:
     host: 125.220.153.23 # redis地址
     port: 31352
-    password: GWCMnhHUYa
+    password: password
   servlet:
     multipart:
       max-file-size: 100MB
