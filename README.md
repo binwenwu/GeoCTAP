@@ -1,3 +1,11 @@
+## 项目说明
+`sql`：数据库SQL文件
+`vue`：前端
+`spb-admin-server`：项目监视服务
+`src`：后端
+`files`：存放用户上传文件
+
+
 ## 项目简介
 GeoCTAP
 
