@@ -60,7 +60,44 @@
 
 ## 展示
 
-![img](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/1.gif)
+- 数据监测
 
+![2](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/2.png)
 
+- 轨迹分析
 
+![3](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/3.png)
+
+- 数据查询
+
+![4](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/4.png)
+
+- 故事地图
+
+![5](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/5.png)
+
+- 专题地图
+
+![6](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/6.png)
+
+- 时空分析
+
+![7](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/7.png)
+
+- 后台管理
+
+![1](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/1.png)
+
+## 浏览器支持
+
+建议使用`Chrome 80+`浏览器进行本地开发
+
+支持现代浏览器，不包括IE
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                         not support                          |                       last 2 versions                        |                       last 2 versions                        |                       last 2 versions                        |                       last 2 versions                        |
+
+## 维护人员
+
+[@Binwen Wu](https://github.com/binwenwu)

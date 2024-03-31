@@ -57,10 +57,46 @@ Test：
 - Change password
 - Integrate Echarts charts
 
-
 ## Preview
 
-![img](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/1.gif)
+- Data monitoring
 
+![2](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/2.png)
 
+- Trajectory analysis
 
+![3](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/3.png)
+
+- Data Query
+
+![4](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/4.png)
+
+- Story Map
+
+![5](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/5.png)
+
+- Thematic map
+
+![6](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/6.png)
+
+- Spatiotemporal analysis
+
+![7](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/7.png)
+
+- Backend management
+
+![1](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/1.png)
+
+## Browser support
+
+The `Chrome 80+` browser is recommended for local development
+
+Support modern browsers, doesn't include IE
+
+| [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>IE | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Edge | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Firefox | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Chrome | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/)</br>Safari |
+| :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: | :----------------------------------------------------------: |
+|                         not support                          |                       last 2 versions                        |                       last 2 versions                        |                       last 2 versions                        |                       last 2 versions                        |
+
+## Maintainer
+
+[@Binwen Wu](https://github.com/binwenwu)
