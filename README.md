@@ -56,6 +56,41 @@
 - Change password
 - Integrate Echarts charts
 
+## Use Gitpod
+
+Open the project in Gitpod (free online dev environment for GitHub) and start coding immediately.
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anncwb/vue-vben-admin)
+
+
+## Install and use
+
+- Get the project code
+
+```bash
+git clone https://github.com/binwenwu/GeoCTAP.git
+```
+
+- Install dependencies
+
+```bash
+cd GeoCTAP/vue
+
+npm install
+```
+
+- Local operation
+
+```bash
+npm run serve
+```
+
+- Start the backend Springboot project
+
+```TEXT
+src/main/java/com/gis/geoctap/SpringbootApplication.java
+```
+
 ## Preview
 
 - Data monitoring

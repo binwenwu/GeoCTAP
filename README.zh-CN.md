@@ -56,6 +56,40 @@
 - 修改密码
 - 整合Echarts图表
 
+## 使用 Gitpod
+
+在Gitpod（GitHub的免费在线开发环境）中打开项目并立即开始编码。
+
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/anncwb/vue-vben-admin)
+
+
+## 安装和使用
+
+- 获取项目代码
+
+```bash
+git clone https://github.com/binwenwu/GeoCTAP.git
+```
+
+- 安装依赖
+
+```bash
+cd GeoCTAP/vue
+
+npm install
+```
+
+- 本地运行（前端）
+
+```bash
+npm run serve
+```
+
+- 启动后端Springboot项目
+
+```TEXT
+src/main/java/com/gis/geoctap/SpringbootApplication.java
+```
 
 ## 展示
 
