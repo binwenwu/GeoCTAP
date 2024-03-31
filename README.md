@@ -1,17 +1,21 @@
-## 项目说明
-- `sql`：数据库SQL文件
-- `vue`：前端
-- `spb-admin-server`：项目监视服务
-- `src`：后端
-- `files`：存放用户上传文件
+**English** | [中文](./README.zh-CN.md)
+
+## Catalogue
+
+- `sql`：MySQL database SQL files
+- `vue`：Web code
+- `spb-admin-server`：Project monitoring services
+- `src`：Backend code
+- `files`：Store user uploaded files
+- `Redis-x64-5.0.14.1.zip`： Redis installation package
 
 
-## 项目简介
-考虑到目前现有儿童防拐卖平台所具备的优点与缺憾以及本项目在全国打击拐卖犯罪行为，找回失踪儿童领域的地位和作用，设立总的建设目标为：利用移动互联网、大数据、云计算、物联网、时空数据挖掘、GIS工程开发、故事设计等先进技术，以故事讲述的形式宣传儿童防拐的预防措施并共情儿童被拐的家长心情，感染公众，让每个公众作为志愿者参与进服务平台；同时实时更新失踪被拐儿童信息特点与故事线，针对故事线的每个场景进行线索分析，利用历史大数据分析设立地理围栏预警范围，预测儿童失踪路线，规划警力部署与搜救工作的开展，建立儿童从救援前中后的全过程全周期的预防打击体系，构建全方位的儿童安全监测预警与救援云服务平台。平台核心立足于公益组织、公安打拐办部门，同时统筹调度公安警务人员（民警、交警、巡警、治安警等）等社会资源，实现对拐卖犯罪大数据分析、儿童实时监护与救援指挥多维一体化的服务体系。
+## Profile
+> Taking into account the advantages and disadvantages of the current anti kidnapping platform for children and the role of the project in combating the crime of kidnapping and recovering the status and role of missing children in the country, the overall construction goal is to use advanced technologies such as mobile Internet, big data, cloud computing, Internet of Things, spatio-temporal data mining, GIS engineering development, story design, etc. to publicize the preventive measures for children against kidnapping in the form of story telling and empathize with the parents of children who are abducted, so as to infect the public and let each public participate in the service platform as a volunteer; Simultaneously update the information characteristics and storyline of missing and abducted children in real-time, and conduct clue analysis for each scene in the storyline.
 
-## 技术栈
+## Technology stack
 
-后端：
+Backend：
 
 - Springboot2
 - Hutool
@@ -19,7 +23,7 @@
 - Lombok
 - Mybatis/Mybatis-plus
 
-前端：
+Web：
 
 - Vue2
 - VueX
@@ -28,40 +32,35 @@
 - Axios
 
 
-
-
-测试：
+Test：
 
 - Postman
 - Swagger
 
+## Function List
+
+- Login registration
+- RBAC based permission model (role and menu permissions can be assigned)
+- Single table addition, deletion, modification, and querying (including pagination fuzzy queries)
+- Login verification code
+- File upload
+- Import/Export
+- Server deployment
+- text editor
+- Tree Table (data can be used as a tree menu)
+- JWT permissions
+- Backend 1-to-many queries
+- Batch deletion
+- Map Services
+- Online Message 
+- Personal profile picture
+- Change password
+- Integrate Echarts charts
 
 
-## 功能清单
+## Preview
 
-- 登录注册
-- 基于RBAC的权限模型（可分配角色和菜单权限）
-- 单表增删改查（包括分页模糊查询）
-- 登录验证码
-- 文件上传
-- 导入导出
-- 服务器部署
-- 文本编辑器
-- 树形表格（数据可作为树形菜单使用）
-- JWT权限
-- 后端1对多查询
-- 批量删除
-- 地图服务
-- 在线留言
-- 个人头像
-- 修改密码
-- 整合Echarts图表
-
-
-## 成果展示
-
-![Alt text](%E7%8F%9E%E7%8F%88%E5%A3%B9%E4%BD%B0%E5%8F%81-GeoCTAP.png)
-
+![img](https://cdn.jsdelivr.net/gh/binwenwu/picgo_demo/img/1.gif)
 
 
 
