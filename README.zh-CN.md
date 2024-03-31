@@ -15,27 +15,26 @@
 
 ## 技术栈
 
-后端：
+**后端：**
 
-- Springboot2
-- Hutool
-- Apache POI
-- Lombok
-- Mybatis/Mybatis-plus
+- [Springboot](https://spring.io/projects/spring-boot) - *Spring Boot*是一个基于Spring提供了开箱即用的一组套件
+- [Hutool](https://hutool.cn/) - Hutool 一个功能丰富且易用的Java工具库
+- [Apache POI](https://poi.apache.org/) - 提供纯 Java 库用于读写 Microsoft Office 格式的文件
+- [Lombok](https://projectlombok.org/) - Project Lombok是一个java库，它可以自动插入编辑器和构建工具，为您的java锦上添花。
+- [Mybatis/Mybatis-plus](https://mybatis.org/mybatis-3/) - MyBatis 是一个 Java 持久性框架
 
-前端：
+**前端：**
 
-- Vue2
-- VueX
-- Vue-Router
-- ElementUI
-- Axios
+- [Vue2](https://v2.vuejs.org/) - 一个开源模型-视图-视图模型前端 JavaScript 库
+- [VueX](https://vuex.vuejs.org/) - *Vuex*是*Vue.js*应用程序的状态管理工具
+- [Vue-Router](https://router.vuejs.org/zh/) - 为 *Vue.js* 提供富有表现力、可配置的、方便的路由
+- [ElementUI](https://element.eleme.io/#/zh-CN) - 一套为开发者、设计师和产品经理准备的基于 Vue 2.0 的桌面端组件库
+- [Axios](https://github.com/axios/axios) - 用于浏览器和node.js的基于Promise的HTTP客户端
 
+**测试：**
 
-测试：
-
-- Postman
-- Swagger
+- [Postman](https://www.postman.com/) - Postman是一个用于构建和使用API的API平台。
+- [Swagger](https://swagger.io/) - 所有人的API开发
 
 ## 功能清单
 

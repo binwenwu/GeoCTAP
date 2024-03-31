@@ -15,27 +15,26 @@
 
 ## Technology stack
 
-Backend：
+**Backend**：
 
-- Springboot2
-- Hutool
-- Apache POI
-- Lombok
-- Mybatis/Mybatis-plus
+- [Springboot](https://spring.io/projects/spring-boot) - *Spring Boot* is a suite based on Spring that provides out of the box functionality
+- [Hutool](https://hutool.cn/) - *Hutool* is a feature rich and easy-to-use Java tool library
+- [Apache POI](https://poi.apache.org/) - Provide pure Java libraries for reading and writing files in Microsoft Office format
+- [Lombok](https://projectlombok.org/) - Project Lombok is a java library that automatically plugs into your editor and build tools, spicing up your java.
+- [Mybatis/Mybatis-plus](https://mybatis.org/mybatis-3/) - *MyBatis* is a Java persistence framework
 
-Web：
+**Web：**
 
-- Vue2
-- VueX
-- Vue-Router
-- ElementUI
-- Axios
+- [Vue2](https://v2.vuejs.org/) - An open-source model view model front-end JavaScript library
+- [VueX](https://vuex.vuejs.org/) - *Vuex* is a **state management pattern + library** for *Vue.js* applications
+- [Vue-Router](https://router.vuejs.org/zh/) - Provide expressive, configurable, and convenient routing for *Vue.js*
+- [ElementUI](https://element.eleme.io/#/zh-CN) - A desktop component library based on Vue 2.0 prepared for developers, designers, and product managers
+- [Axios](https://github.com/axios/axios) - Promise based HTTP client for the browser and node.js
 
+**Test：**
 
-Test：
-
-- Postman
-- Swagger
+- [Postman](https://www.postman.com/) - Postman is an API platform for building and using APIs.
+- [Swagger](https://swagger.io/) - API Developmentfor Everyone
 
 ## Function List
 
